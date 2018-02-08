@@ -1,0 +1,37 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#353535",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home-icon1.png",
+        "selectedIconPath": "images/home-icon1-ac.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "iconPath": "images/home-icon2.png",
+        "selectedIconPath": "images/home-icon2-ac.png",
+        "text": "动态"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 120000,
+    "downloadFile": 120000
+  }
+}
