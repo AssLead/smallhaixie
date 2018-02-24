@@ -1,14 +1,14 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/dynamic/dynamic"
+    "pages/dongtai/dongtai"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle":"#fff"
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#181818",
+    "navigationBarTitleText": "微商会",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#353535",
@@ -23,7 +23,7 @@
         "text": "主页"
       },
       {
-        "pagePath": "pages/dynamic/dynamic",
+        "pagePath": "pages/dongtai/dongtai",
         "iconPath": "images/home-icon2.png",
         "selectedIconPath": "images/home-icon2-ac.png",
         "text": "动态"

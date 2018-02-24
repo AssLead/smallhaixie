@@ -1,26 +1,36 @@
-var app = getApp()
+//index.js
+//获取应用实例
+const app = getApp()
 Page({
   data: {
-    imgUrls: [
-      {
-        link: '/pages/index/index',
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      
-      }, {
-        link: '/pages/logs/logs',
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      }, {
-        link: '/pages/test/test',
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-      }
+    width: app.systemInfo.windowWidth,
+    height: app.systemInfo.windowHeight,
+    banner: ['http://i.dxlfile.com/adm/material/2016_12_12/20161212135600242250.jpg',
+      'http://i.dxlfile.com/adm/material/2017_01_04/2017010411165785666.jpg',
+      'http://i.dxlfile.com/adm/material/2017_01_04/20170104140739205869.jpg',
+      'http://i.dxlfile.com/adm/material/2017_01_16/20170116171332214897.jpg'],
+    functions: [
+     
     ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
-    userInfo: {}
+
   },
+
   onLoad: function () {
-    console.log('onLoad test');
+
+  },
+
+  fucClick(event) {
+    const id = event.currentTarget.dataset.id;
+    console.log(id);
+    wx.navigateTo({
+      // url: '../storelist/storelist',
+    })
+
+  },
+  goodDetail(event) {
+    wx.navigateTo({
+      // url: '../goods/goods',
+    })
   }
+
 })
