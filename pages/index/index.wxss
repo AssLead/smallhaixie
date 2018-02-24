@@ -4,8 +4,9 @@ page{
 
 .banner{
     width: 100%;
-    height: 411rpx;
+    height: 611rpx;
 }
+
 
 .funcs{
     background-color: #ffffff;

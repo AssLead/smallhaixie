@@ -18,8 +18,8 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/home-icon1.png",
-        "selectedIconPath": "images/home-icon1-ac.png",
+        "iconPath": "images/gouzi.png",
+        "selectedIconPath": "images/gouzi1.png",
         "text": "主页"
       },
       {

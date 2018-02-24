@@ -13,15 +13,5 @@
       <view class='name'>{{item.name}}</view>
     </view>
   </view>
-  <view class='maylike'>
-  <view class='title'>猜你喜欢</view>
-  <view class='goods'>
 
-  <block  wx:for="{{goods}}" wx:for-item='good' wx:key='*this' >
-
-  <template is="good" data="{{good:good}}"/>
-  </block>
-  
-  </view>
-  </view>
 </scroll-view>
