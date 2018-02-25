@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="item_header">
+    <view class='v'>
+      <text class="name">{{userInfo.nickName}}</text>
+      <text class='sign'>如果命运是一条暗涌的河流，谁是你灵魂的摆渡人</text>
+    </view>
+    <image class="headimg" src="{{userInfo.avatarUrl}}" />
+  </view>
+
+  <block wx:for-items="{{menuList}}" wx:key="{{index}}">
+    <view class="menu_list">
+      <block wx:for-items="{{item.list}}" wx:for-item="list" wx:for-index="i" wx:key="{{i}}">
+        <navigator url="{{list.page}}" class="menu_item">
+          <view class="menu_left">
+            <text class="menu_left_txt">{{list.name}}</text>
+          </view>
+          <image class="menu_right" src="{{list.arrow}}" />
+        </navigator>
+      </block>
+    </view>
+  </block>
+</view>

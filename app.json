@@ -1,25 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/dongtai/dongtai"
+    "pages/dongtai/dongtai",
+    "pages/action/action",
+    "pages/my/my",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#181818",
-    "navigationBarTitleText": "微商会",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
-    "color": "#353535",
-    "selectedColor": "#3cc51f",
+    "color": "#484848",
+    "selectedColor": "#00a69a",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/gouzi.png",
-        "selectedIconPath": "images/gouzi1.png",
+        "iconPath": "images/home-icon1.png",
+        "selectedIconPath": "images/home-icon1-ac.png",
         "text": "主页"
       },
       {
@@ -27,6 +29,18 @@
         "iconPath": "images/home-icon2.png",
         "selectedIconPath": "images/home-icon2-ac.png",
         "text": "动态"
+      },
+      {
+        "pagePath": "pages/action/action",
+        "iconPath": "images/home-icon3.png",
+        "selectedIconPath": "images/home-icon3-ac.png",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/home-icon4.png",
+        "selectedIconPath": "images/home-icon4-ac.png",
+        "text": "我的"
       }
     ]
   },
