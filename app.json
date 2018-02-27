@@ -8,9 +8,9 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarBackgroundColor": "#00a2ea",
+    "navigationBarTitleText": "微商会",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#484848",
