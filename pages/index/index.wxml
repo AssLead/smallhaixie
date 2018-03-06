@@ -1,32 +1,31 @@
-<!--index.wxml-->
-<scroll-view class='scroller' style="width:{{width}}px;height:{{height}}px;" scroll-y="true" lower-threshold="800" bindscrolltolower="loadmore">
-
-    <swiper class='banners' indicator-dots="true" autoplay="true" interval="4000" duration="0" indicator-color="#60ffffff" indicator-active-color="#fff" circular="false">
-      <block wx:for="{{banner}}" wx:key="*this">
-        <swiper-item>
-          <view>
-            <view></view>
-            <input class="search" type="text" name="searchname" placeholder="搜索你感兴趣的协会" focus='false' />
-          </view>
-          <image src="{{item}}" class="imbanner" mode="scaleToFill"></image>
-        </swiper-item>
-      </block>
-    </swiper>
-
-    <view class="news-item-container">
-    <block wx:for="{{list}}" wx:for-index="id">
-      <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>
-      <navigator wx:else url="../detail/detail?id={{item.id}}">
-        <view class="news-item" >
-          <view class="news-item-left">
-            <text class="news-item-title">{{item.title}}</text>
-          </view>
-          <view class="news-item-right">
-            <image src="{{item.images[0]}}" class="news-image"/>
-          </view>
-        </view>
-      </navigator>
+<view class="slide">
+  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="0" circular="true">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
+      </swiper-item>
     </block>
-  </view>
+  </swiper>
+</view>
 
-</scroll-view>
+
+<!-- <view class="news-item-container">
+  <block wx:for="{{list}}" wx:for-index="id">
+    <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>
+    <navigator wx:else url="../detail/detail?id={{item.id}}">
+      <view class="news-item">
+        <view class="news-item-left">
+          <text class="news-item-title">{{item.title}}</text>
+        </view>
+        <view class="news-item-right">
+          <image src="{{item.images[0]}}" class="news-image" />
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view> -->
+
+
+<view class='addxie'>
+  + 添加协会
+</view>
