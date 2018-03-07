@@ -17,7 +17,7 @@ var config = {
   host: `${host}`,
 
   //景区详情
-  carouselImage: `{host}/api/home/index`,
+  carouselImage: `${host}/api/home/index`,
   // scenicDetails: `${host}/tscenic/selectSceniceInfoByApplet`,
   // // 下面的地址配合云端 Server 工作
   // // host,

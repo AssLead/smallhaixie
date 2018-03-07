@@ -18,7 +18,7 @@ Page({
       duration: 10000
     });
     wx.request({
-      url: config.scenicDetails,
+      url: config.carouselImage,
       data: {
         // "pkScenic": 29
       },
@@ -32,15 +32,15 @@ Page({
         // console.log(res.data.data);
         if (data.status == "SUCCESS") {
           // var profile = data.data.scProfile;
-          var logo = config.host + data.data.ad_code;
+          // var logo = config.host + data.result;
 
           that.setData({
             // profile: profile && (profile.slice(0, 40) + "..."),
-            logo: logo,
+            // logo: logo,
    
             data: {
               imgUrls: [
-                config.host + data.data.ad_code
+                config.host + data.result.ad_code.banner.ad_code
               ]
             },
           });
