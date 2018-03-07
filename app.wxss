@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**app.wxss**/
 .clearfix {
   overflow: auto;
@@ -12,3 +13,5 @@
 .hide{
     display:none!important;
 }
+=======
+>>>>>>> a8c1e0298d2e3099f43da8e084ae62e1fc4bf705
