@@ -1,0 +1,35 @@
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.about {
+    margin-top: 40px;
+}
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.f12px {
+    font-size: 12px !important;
+}
+.p {
+    margin: 0 0 10px;
+}
+.f14px {
+    font-size: 14px !important;
+}
+page {
+	color: #484848;
+}
+textarea {
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    /*width: 100%;*/
+    padding: 6px 12px;
+    margin-bottom: 20px;
+}

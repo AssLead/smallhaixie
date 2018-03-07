@@ -1,0 +1,43 @@
+<view class="container">
+  	<view class="address">
+      	<view class="f18px">新增地址</view>
+  	</view>
+   
+   <form action="" bindsubmit="formSubmit" bindreset="formReset">
+	    <view class="section">
+		    <view class="section__title">姓名</view>
+		    <input placeholder="输入姓名" class="add-input"/>
+		</view>
+		<view class="section">
+		    <view class="section__title">手机</view>
+		    <input type="number" maxlength="11" placeholder="输入手机" class="add-input" />
+		</view>
+		<view class="section">
+			<!-- <view class="section__title">省市区选择器</view> -->
+			<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+			    <view class="picker">
+			      	{{region[0]}}，{{region[1]}}，{{region[2]}}
+			    </view>
+			</picker>
+		</view>
+		<view class="section">
+		    <view class="section__title">详细地址</view>
+		    <input placeholder="详细地址" class="add-input" />
+		</view>
+		<view class="section">
+		    <view class="section__title">身份证信息（应海关要求，仅用于海关清关，加密保存）</view>
+		    <input type="idcard" class="add-input" placeholder="输入身份证信息" />
+		</view>
+	    
+		<view class="navbar-fixed-bottom clearfix">
+			<view class="fb-bg">
+			    <button class="footerbtn" formType="submit" size="default" plain="false" >保存收货信息</button>
+			</view>
+
+		</view>
+
+   </form>
+
+
+
+</view>

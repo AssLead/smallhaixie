@@ -1,0 +1,26 @@
+.older-section {
+    padding: 2em 15px 1em;
+    margin-bottom: 1em;
+}
+.text-center {
+    text-align: center;
+}
+.older-sec {
+    padding: 0 20px;
+    font-size: 12px;
+}
+.f15px {
+    font-size: 15px !important;
+}
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+.bcf {
+    color: #00a69a !important;
+}
+.older-line {
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 59px;
+}

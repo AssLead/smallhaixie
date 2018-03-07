@@ -1,0 +1,60 @@
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.older-sec {
+    padding: 0 20px;
+    font-size: 12px;
+}
+.older-block-b {
+    padding: 1em 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+.p0 {
+    padding-left: 0;
+}
+.col-xs-9 {
+	float: left;
+    width: 75%;
+}
+.older-list-title {
+    font-size: 14px;
+}
+.small, small {
+    font-size: 85%;
+}
+.col-xs-3 {
+	float: left;
+    width: 25%;
+}
+.older-line {
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 59px;
+}
+.f14px {
+    font-size: 14px !important;
+}
+.older-section {
+    padding: 2em 15px 1em;
+    margin-bottom: 1em;
+}
+.fb-bg {
+    padding: 7px 15px;
+}
+.navbar-fixed-bottom {
+    bottom: 0px;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.footerbtn {
+    background: #ea5e5d !important;
+    color: #fff !important;
+    font-size: 28rpx;
+    border: 0 !important;
+}

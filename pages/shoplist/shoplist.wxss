@@ -1,0 +1,91 @@
+
+.mgtb2500 {
+    margin: 25px 0 0;
+}
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.text-center {
+    text-align: center;
+}
+
+
+.shop-list {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin-top: 50rpx;
+}
+.shop-block {
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+    box-sizing:border-box;
+    
+    padding-bottom:10px
+}
+.shopimg {
+   width:320rpx;
+   height:320rpx;
+}
+.bor1 {
+  width:320rpx;
+  height:320rpx;
+  border: 1px solid #e0e0e0;
+  border-radius: 10rpx;
+}
+
+.mgt5 {
+    margin-top: 5px;
+}
+.f14px {
+    font-size: 28rpxpx !important;
+}
+.shopname {
+	width:320rpx;
+}
+.f12px {
+    font-size: 24rpx !important;
+}
+.pay-pirce text {
+    color: #f22;
+}
+
+/* .shop-list {
+    margin-top: 50rpx;
+    padding: 0 30rpx;
+}
+.shop-block {
+    padding: 30rpx 10rpx;
+    display: inline-table;
+}
+.col-xs-6 {
+    float: left;
+    width: 45%;
+}
+.pay-pirce {
+    font-size: 1em;
+    display: block;
+}
+.shop-block .bor1 {
+    border: 2rpx solid #e0e0e0;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.shopimg {
+    width: 320rpx;
+    height: 320rpx;
+}
+.mgt5 {
+    margin-top: 5px;
+}
+.f14px {
+    font-size: 28rpx !important;
+}
+.fwb {
+    font-weight: bold;
+} */

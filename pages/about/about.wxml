@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="about">
+	    <view class="f18px">关于微商会</view>
+	    <view class="f12px" style="margin-top:30px">
+	        <view class="p">微商会成立之初是为了提供更方便，流量更多的活动交流平台，在这里您可以找到与您志同道合的朋友。</view>
+	        <view class="p">我们想了解你喜欢什么方面，以及您认为我们可以在哪些方面做得更好。</view>
+
+
+	    </view>
+	    <view class="f14px" style="margin: 50px 0 15px">告诉我们</view>
+	    <view class="section">
+			<form bindsubmit="bindFormSubmit">
+			    <textarea placeholder="请输入...." name="textarea"/>
+			    <button form-type="submit"> 提交反馈 </button>
+			</form>
+		</view>
+   </view>
+</view>

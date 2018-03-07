@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="hd-title f18px">我的优惠卷</view>
+    <view class="yhj-tab clearfix">
+		<view class="yhj-block clearfix">
+		    <view class="col-xs-3 money p0"><text class="small">￥</text>5</view>
+		    <view class="col-xs-9 bak pr0 clearfix">
+		        <view class="yhj-name">罗湖海归协会红包</view>
+		        <view class="yhj-time">20170612-20170615   使用</view>
+		        <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
+		    </view>
+		</view> 
+	</view>
+
+	<view class="yhj-tab clearfix">
+		<view class="yhj-block clearfix">
+		    <view class="col-xs-3 money p0"><text class="small">￥</text>5</view>
+		    <view class="col-xs-9 bak pr0 clearfix">
+		        <view class="yhj-name">罗湖海归协会红包</view>
+		        <view class="yhj-time">20170612-20170615   使用</view>
+		        <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
+		    </view>
+		</view> 
+	</view>
+</view>

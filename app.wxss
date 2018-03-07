@@ -1,1 +1,14 @@
 /**app.wxss**/
+.clearfix {
+  overflow: auto;
+  _height: 1%;
+}
+.pull-right {
+    float: right!important;
+}
+.pull-left {
+    float: left!important;
+}
+.hide{
+    display:none!important;
+}

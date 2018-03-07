@@ -1,0 +1,89 @@
+<view class="old-list">
+
+  <view class="older-block sec10 mt0">
+    <view class="old-condition fred">待付款</view>
+    <view class="older-block-a">
+        <navigator url="../shoplist/shoplist" hover-class="" class="clearfix">
+            <view class="older-block-b clearfix">
+              <view class="col-xs-4 p0 pr15">
+                <image mode="scaleToFill" class="shopimg" src="../../images/goods.jpg"></image>
+              </view>
+              <view class="col-xs-8 p00">
+                <view class="older-list-1">          
+                  <view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
+                  <view class="older-list-pirce fred">￥ 35.00</view>
+                </view>
+              </view>
+            </view>
+        </navigator>
+        <!-- <view class="voteText countDownTimeText">{{countDownMinute}}分</view>  
+    <view class="voteText countDownTimeText">{{countDownSecond}}秒</view>   -->
+        <a href="" class="hide{{showView?'show':''}} older-pirce-btn1 pull-right">抢先支付 {{countDownMinute}}:{{countDownSecond}}</a>
+        <view class="older-pirce">实付：<span class="fred">￥ 35.00</span></view>
+    </view>
+  </view>
+
+  <view class="older-block sec10 mt0">
+    <view class="old-condition ">所有包裹取消</view>
+    <view class="older-block-a">
+        <navigator url="../shoplist/shoplist" hover-class="" class="clearfix">
+            <view class="older-block-b clearfix">
+              <view class="col-xs-4 p0 pr15">
+                <image mode="scaleToFill" class="shopimg" src="../../images/goods.jpg"></image>
+              </view>
+              <view class="col-xs-8 p00">
+                <view class="older-list-1">          
+                  <view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
+                  <view class="older-list-pirce fred">￥ 35.00</view>
+                </view>
+              </view>
+            </view>
+        </navigator>
+        <!-- <a href="" class="older-pirce-btn1  pull-right">抢先支付 30:00</a> -->
+        <view class="older-pirce">实付：<span class="fred">￥ 35.00</span></view>
+    </view>
+  </view>
+
+  <view class="older-block sec10 mt0">
+    <view class="old-condition bcf">已支付</view>
+    <view class="older-block-a">
+        <navigator url="../shoplist/shoplist" hover-class="" class="clearfix">
+            <view class="older-block-b clearfix">
+              <view class="col-xs-4 p0 pr15">
+                <image mode="scaleToFill" class="shopimg" src="../../images/goods.jpg"></image>
+              </view>
+              <view class="col-xs-8 p00">
+                <view class="older-list-1">          
+                  <view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
+                  <view class="older-list-pirce fred">￥ 35.00</view>
+                </view>
+              </view>
+            </view>
+        </navigator>
+        <view class="older-pirce">实付：<span class="fred">￥ 35.00</span></view>
+    </view>
+  </view>      
+
+  <view class="older-block sec10 mt0">
+    <view class="old-condition bcf">已完成</view>
+    <view class="older-block-a">
+        <navigator url="../old-1/old-1" hover-class="" class="clearfix">
+            <view class="older-block-b clearfix">
+              <view class="col-xs-4 p0 pr15">
+                <image mode="scaleToFill" class="shopimg" src="../../images/goods.jpg"></image>
+              </view>
+              <view class="col-xs-8 p00">
+                <view class="older-list-1">          
+                  <view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
+                  <view class="older-list-pirce fred">￥ 35.00</view>
+                </view>
+              </view>
+            </view>
+        </navigator>
+        <view class="older-pirce">实付：<span class="fred">￥ 35.00</span></view>
+    </view>
+  </view>   
+
+
+
+</view>

@@ -9,18 +9,18 @@ Page({
         list: [
           {
             name: '我的优惠券',
-            page: '',
+            page: '../coupon/coupon',
             arrow: '../../images/icon_my_coupon.png'
           },
           {
             name: '积分商城',
-            page: '',
+            page: '../shop/shop',
             icon: '../../images/myorder_icon.png',
             arrow: '../../images/icon_my_shop.png'
           },
           {
             name: '我的关注',
-            page: '',
+            page: '../follow/follow',
             arrow: '../../images/icon_my_like.png'
           },
           {

@@ -1,0 +1,40 @@
+<view class="older-section clearfix" style="background: #fff">
+    <view class="f18px">我的订单</view>
+    <view class="f15px mgtb10">正在处理您的￥30.0退款申请，1个工作日内完成处理 2017-06-25 10:35:35</view>
+    <view class="f15px mgtb10">地址</view>
+    <view class="col-xs-9 p0">
+        <view class="textp">马云的媳妇  13189767135</view>
+        <view class="textp">广东省深圳市福田区益田路3008号皇都广场AA座807</view>
+   	</view>
+</view>
+
+<view class="older-sec sec10 clearfix" style="background: #fff">
+    <view class="clearfix">
+        <view class="older-line">
+        	<view class=" pull-right bcf">已取消</view>订单号：5032645181546
+        </view>
+        <view class="older-block-b clearfix">
+            <view class="f14px fwb" style="margin-bottom: 10px;">罗湖区海归协会</view>
+           	<view class="col-xs-4 p0 pr15">
+				<image mode="scaleToFill" class="shopimg" src="../../images/goods.jpg"></image>
+            </view>
+            <view class="col-xs-8 p00">
+                <view class="older-list-1">          
+                  	<view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
+                  	<view class="older-list-pirce "><text class="fred">￥ 35.00</text> * 1</view>
+                </view>
+            </view>
+        </view>
+        <a href="" class="older-pirce-btn2  pull-right">查看物流</a>
+    </view>
+</view>
+
+<view class="older-sec clearfix" style="background: #fff">
+        <view class="older-line"><view class="pull-right">-￥20.00</view>积分抵扣</view>
+        <view class="older-line"><view class="pull-right">免运费</view>运费</view>
+        <view class="older-line" style="border-bottom: 0"><view class="pull-right">￥10</view>总金额（CNY）</view>
+</view>
+
+<view class="fb-bg">
+	<button type="default" size="default" plain="false" >删除订单</button>
+</view>

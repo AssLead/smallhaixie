@@ -25,8 +25,92 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 13,
+			"list": [
+				{
+					"id": -1,
+					"name": "coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shop",
+					"pathName": "pages/shop/shop",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shoplist",
+					"pathName": "pages/shoplist/shoplist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "goods",
+					"pathName": "pages/goods/goods",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "follow",
+					"pathName": "pages/follow/follow",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "old",
+					"pathName": "pages/old/old",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "old1",
+					"pathName": "pages/old-1/old-1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "old2",
+					"pathName": "pages/old-2/old-2",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "old3",
+					"pathName": "pages/old-3/old-3",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart-end",
+					"pathName": "pages/cartend/cartend",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address1",
+					"pathName": "pages/address1/address1",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "address2",
+					"pathName": "pages/address2/address2",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/about/about"
+				}
+			]
 		}
 	}
 }

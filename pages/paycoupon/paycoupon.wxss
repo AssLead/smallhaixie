@@ -1,0 +1,68 @@
+.yhj-tab {
+    width: 95%;
+    margin: 20px auto;
+}
+.yhj-block {
+    padding: 40rpx 30rpx;
+    /*box-shadow: 7rpx 7rpx 7rpx #e0e0e0;*/
+    border: 2rpx solid #e0e0e0;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+
+.money {
+    font-size: 72rpx;
+    position: relative;
+    color: #484848;
+}
+.p0 {
+    padding-left: 0;
+}
+.col-xs-3 {
+    float: left;
+    width: 20%;
+}
+.yhj-block .small {
+    font-size: 50%;
+}
+
+.bak {
+    border-left: 2rpx solid #e0e0e0;
+}
+.pr0 {
+    padding-right: 0;
+}
+.col-xs-9 {
+    float: left;
+    width: 75%;
+    padding-left: 15px;
+}
+
+.yhj-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #484848;
+}
+.yhj-time {
+    color: #666;
+    font-size: 12px;
+}
+.yhj-note {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.e0 {
+    color: #e0e0e0 !important;
+}
+
+.hd-title {
+	padding-right: 20px;
+    padding-left: 20px;
+    line-height: 80px;
+}
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}

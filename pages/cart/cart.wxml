@@ -1,0 +1,41 @@
+<view class="older-section" style="margin-bottom: 0;">
+        <view class="f18px">核对购买活动</view>
+</view>
+
+<view class="older-sec clearfix" style="background: #fff; ">
+    <view class="clearfix">
+        <view class="older-block-b clearfix">
+            <view class="col-xs-9 p0">
+                <view class="older-list-1">          
+                  <view class="older-list-title">深圳体育中心比赛游泳活动</view>
+                  <view class="older-list-small "><small>12月21日礼拜五</small></view>
+                  <view class="older-list-small "><small>1个活动，1位参加者</small></view>
+                </view>
+            </view>
+            <view class="col-xs-3 p00" style="overflow: hidden;text-align: right;">
+            	<image mode="scaleToFill" class="shopimg" src="../../images/200x200.jpg" style="width: 50px; height: 75px;"></image>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="older-sec clearfix" style="background: #fff">
+         
+    <view class="older-line">
+    	<navigator url="../paycoupon/paycoupon" hover-class="" class="pay-pirce">
+			<span class="pull-right">无可用优惠券 <i class="fa fa-angle-right">></i></span><span>优惠券</span>
+    	</navigator>
+    </view>
+</view>
+
+<view class="older-sec clearfix" style="background: #fff">
+    <view class="older-line f14px"><span class="pull-right">-￥5</span>理事长</view>
+    <view class="older-line"><span class="pull-right">￥10</span>总金额（CNY）</view>
+</view>
+
+<view class="navbar-fixed-bottom clearfix">
+	<view class="fb-bg">
+	    <button class="footerbtn" size="default" plain="false" >去支付</button>
+	</view>
+
+</view>
