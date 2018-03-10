@@ -25,7 +25,7 @@ Page({
           },
           {
             name: '我的订单',
-            page: '',
+            page: '../old/old',
             arrow: '../../images/icon_my_orderform.png'
           },
           {
@@ -40,7 +40,7 @@ Page({
           },
           {
             name: '关于我们',
-            page: '',
+            page: '../about/about',
             arrow: '../../images/icon_my_we.png'
           }
         ]
