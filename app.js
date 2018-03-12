@@ -35,9 +35,6 @@ App({
         success:function(res_login){
           console.log(res_login.code)
           if(res_login.code){
-            wx.navigateTo({
-              url: '../index/index'
-            })
             wx.showLoading({
               title: '登录中...',
             })

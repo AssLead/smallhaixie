@@ -23,7 +23,7 @@ Page({
     app.isLogin(function (userDetail) {
       // 更新数据
       that.setData({
-        userDetail: '123'
+        userDetail: userDetail
       })
     });
     /** 
@@ -44,11 +44,6 @@ Page({
     var that = this;
 
     // console.log(that.data.userDetail);
-
-    // console.log(userId);
-    /*if (!userId) {
-      var userId = wx.getStorageSync('userDetail').id;
-    };*/
     var jsonData = {
         userId:userId,
     };
