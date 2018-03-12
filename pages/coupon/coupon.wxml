@@ -7,7 +7,18 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">  
     <!-- 未使用-->  
     <swiper-item>  
-        <view class="yhj-tab clearfix">
+        <view wx:for="{{couponlist}}" class="yhj-tab clearfix" data-key='{{index}}'>
+            <view class="yhj-block clearfix">
+                <view class="col-xs-3 money p0"><text class="small">￥</text>{{item.denomination}}</view>
+                <view class="col-xs-9 bak pr0 clearfix">
+                    <view class="yhj-name">罗湖海归协会红包</view>
+                    <view class="yhj-time">{{item.deadline}} 前使用</view>
+                    <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
+                </view>
+            </view>
+            <!-- <span class="pull-right {{item.state==1?'add-right':''}}" ></span>{{item.name}} -->
+        </view>
+        <!-- <view class="yhj-tab clearfix">
             <view class="yhj-block clearfix">
                 <view class="col-xs-3 money p0"><text class="small">￥</text>5</view>
                 <view class="col-xs-9 bak pr0 clearfix">
@@ -17,7 +28,7 @@
                 </view>
             </view> 
         </view>
-
+        
         <view class="yhj-tab clearfix">
             <view class="yhj-block clearfix">
                 <view class="col-xs-3 money p0"><text class="small">￥</text>15</view>
@@ -28,7 +39,7 @@
                 </view>
             </view> 
         </view>
-
+        
         <view class="yhj-tab clearfix">
             <view class="yhj-block clearfix">
                 <view class="col-xs-3 money p0"><text class="small">￥</text>30</view>
@@ -38,7 +49,7 @@
                     <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
                 </view>
             </view> 
-        </view>
+        </view> -->
          
     </swiper-item>  
 

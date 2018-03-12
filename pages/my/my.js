@@ -1,5 +1,6 @@
 // 获取应用实例
 var app = getApp();
+var request = require("../../utils/request.js");
 // 注册页面
 Page({
   data: {
@@ -35,7 +36,7 @@ Page({
           },
           {
             name: '设置',
-            page: '',
+            page: '../setting/setting',
             arrow: '../../images/icon_my_setting.png'
           },
           {
@@ -57,5 +58,27 @@ Page({
         userInfo: userInfo
       })
     });
+    app.isLogin();
+    
+    /*wx.login({
+      success:function(res_login){
+        console.log(res_login.code)
+        if(res_login.code){
+          wx.request({
+              url: 'http://www.qplant.vip/VisonShop/wxcode',
+              data: {
+                code: res_login.code,
+              },
+              method: 'GET',
+              header: { 'content-type': 'application/json'},
+              success: function(res){
+                console.log(res.data.list[0].openid)
+                // wx.setStorageSync('user_key', res.data);
+              }
+          })
+          
+        }
+      },
+    });*/
   }
 })

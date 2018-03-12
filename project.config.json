@@ -25,7 +25,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
@@ -109,6 +109,42 @@
 					"id": -1,
 					"name": "about",
 					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "setting",
+					"pathName": "pages/setting/setting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tag",
+					"pathName": "pages/tag/tag",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "dongtai",
+					"pathName": "pages/dynamic/dynamic",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "note",
+					"pathName": "pages/note/note",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my",
+					"pathName": "pages/my/my",
 					"query": ""
 				}
 			]
