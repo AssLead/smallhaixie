@@ -1,4 +1,6 @@
 // pages/old/old.js
+var app = getApp();
+var request = require("../../utils/request.js");
 Page({
 
   /**
@@ -7,14 +9,46 @@ Page({
   data: {
     countDownMinute: 0,  
     countDownSecond: 0, 
-    showView: false
+    showView: false,
+    orderlist: null,
+    userDetail: null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    showView: (options.showView == "true" ? true : false)
+    showView: (options.showView == "true" ? true : false);
+    app.isLogin(function (userDetail) {
+      // 更新数据
+      that.setData({
+        userDetail: userDetail
+      })
+    });
+    // findCommodityOrderUser  
+    var requestUrl = "findCommodityOrderUser";
+    var userId = wx.getStorageSync('userDetail').id;
+    var that = this;
+
+    var jsonData = {
+        userId:userId,
+    };
+
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        /*wx.showLoading({})
+        if (res.code == 'success') {
+            var followlist = res.list[0].fBean;
+            console.log(followlist);
+            that.setData({  
+                followlist: followlist
+            })  
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
+        }*/
+      }
+    )
   },
 
   /**

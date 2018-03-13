@@ -49,13 +49,19 @@ Page({
     };
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
-        console.log(res);
+        // console.log(res);
+        wx.showLoading({
+          // title: '登录中...',
+        })
         if (res.code == 'success') {
             var couponlist = res.list[0].cplist;
             console.log(couponlist);
             that.setData({  
                 couponlist: couponlist
             })  
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
         }
       }
     )

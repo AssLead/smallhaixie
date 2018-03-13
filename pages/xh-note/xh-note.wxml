@@ -1,2 +1,97 @@
-<!--pages/xh-note/xh-note.wxml-->
-<text>pages/xh-note/xh-note.wxml</text>
+<view class="xh-note xh-note1">
+	<image mode="scaleToFill" class="" src="../../images/banner3_02.jpg" style="height: 225px"></image>
+</view>
+
+<view style="background:#fff">
+    <view class="container clearfix">
+        <view class="xhn-title">
+        	<view class="pull-right xht-icon">
+        		<image mode="scaleToFill" class="" src="../../images/img-thumbnail.jpg" ></image>
+        	</view>
+        	<span class="f18px">篮球协会</span>
+      </view>
+      <view class="f12px mgt30  p0" style="font-weight: normal">
+      	篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗···
+      </view>
+      <view class="xh-position">
+        <span class="pull-right">></span>
+        <span class="xh-icon f12px">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon1.png" ></image>
+        	深圳
+        </span>
+        <span class="xh-icon f12px">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon2.png" ></image>
+	        888
+	    </span>
+      </view>
+
+      <view class="xh-icons clearfix">
+        <view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons1.png" ></image>活动
+        </view>
+		<view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons2.png" ></image>动态
+        </view>
+        <view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons3.png" ></image>留言板
+        </view>
+        <view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons4.png" ></image>社区
+        </view>
+      </view>
+      <view class="xh-icons clearfix">
+      	<view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons5.png" ></image>理事企业
+        </view>
+        <view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons6.png" ></image>慈善拍卖
+        </view>
+        <view class="xh-iconsa">
+        	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons7.png" ></image>商城
+        </view>
+      </view>
+
+    </view>
+</view>
+
+<view class="xh-chage clearfix">
+	<view class="col-xs-6 p00" style="position: relative;border-right: 1px solid #e0e0e0;">
+		<view class="section">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			    <view class="picker">
+			      活动地区：{{array[index]}}
+			    </view>
+			</picker>
+		</view>
+    </view>
+    <view class="col-xs-6 p00">
+    	<view class="section">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			    <view class="picker">
+			      活动地区：{{array[index]}}
+			    </view>
+			</picker>
+		</view>
+    </view>
+    <!-- <div class="col-xs-6 p00" style="position: relative;border-right: 1px solid #e0e0e0;">
+    </div>
+    <div class="col-xs-6 p00" style="position: relative;">
+      <a href="javascript:;" class="xh-ca">活动类型 <i class="fa fa-angle-down"></i></a>
+      <ul class="xh-chage-ul" style="display: none;">
+        <li><a href="javascript:;">康乐</a></li>
+        <li><a href="javascript:;">文化</a></li>
+        <li><a href="javascript:;">艺术</a></li>
+        <li><a href="javascript:;">运动</a></li>
+        <li><a href="javascript:;">培训</a></li>
+        <li><a href="javascript:;">招聘</a></li>
+        <li><a href="javascript:;">企业走访</a></li>
+        <li><a href="javascript:;">资源对接</a></li>
+        <li><a href="javascript:;">政府资源</a></li>
+        <li><a href="javascript:;">国外走访</a></li>
+        <li><a href="javascript:;">协会大事</a></li>
+        <li><a href="javascript:;">慈善</a></li>
+        <li><a href="javascript:;">创业</a></li>
+      </ul>
+    </div>
+      <div class="clearfix"></div> -->
+</view>
