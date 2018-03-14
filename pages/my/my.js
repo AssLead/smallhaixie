@@ -25,22 +25,22 @@ Page({
           },
           {
             name: '我的订单',
-            page: '',
+            page: '../goods/goods',
             arrow: '../../images/icon_my_orderform.png'
           },
           {
             name: '金融投资',
-            page: '',
+            page: '../goods/goods',
             arrow: '../../images/icon_my_invest.png'
           },
           {
             name: '设置',
-            page: '',
+            page: '../goods/goods',
             arrow: '../../images/icon_my_setting.png'
           },
           {
             name: '关于我们',
-            page: '',
+            page: '../about/about',
             arrow: '../../images/icon_my_we.png'
           }
         ]

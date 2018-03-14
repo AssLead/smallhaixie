@@ -3,43 +3,26 @@
  */
 
 
-var imgUrl = 'mjw.citgroup.cn/mapImages/image';
+
 
 
 
 /**
  * prod
  */
-var host = 'http://m.sz28.cn';
+var host = 'https://www.qplant.vip/VisonShop';
+
+
 
 var config = {
   //主机
   host: `${host}`,
 
-  //景区详情
-  carouselImage: `${host}/api/home/index`,
-  // scenicDetails: `${host}/tscenic/selectSceniceInfoByApplet`,
-  // // 下面的地址配合云端 Server 工作
-  // // host,
-  // shilinHost: `${host}/`,
-  // //酒店列表接口
-  // hotelList: `${host}/phone/api/hotel/index`,
-  // //酒店详情接口
-  // hotelShow: `${host}/phone/api/hotel/show/`,
-  // //酒店下单接口
-  // hotelOrder: `${host}/phone/api/login/create`,
-  // //门票列表接口
-  // spotList: `${host}/phone/api/spot/index`,
-  // //门票详情接口
-  // spotShow: `${host}/phone/api/spot/show/`,
-  // //门票下单接口
-  // spotOrder: `${host}/phone/api/login/spotCreate`,
-  // //支付接口
-  // orderPay: `${host}/phone/wxpay/weixinpay`,
-  // //登陆接口
-  // ecLogin: `${host}/phone/member/login/wx_login`,
-  // //个人订单接口
-  // myOrder: `${host}/phone/api/order/list/`,
+  //banner
+  carouselImage: `${host}/banner`,
+
+  imageUrl:'${host}/imageaction?type=5&name=',
+
 
   //数据接口调用
   apiBase: `${host}`,
