@@ -7,7 +7,6 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">  
     <!-- 未使用-->  
     <swiper-item>  
-        <view wx:for="{{couponlist}}" class="yhj-tab clearfix" data-key='{{index}}'>
         <view wx:for="{{couponlist}}" class="yhj-tab clearfix" data-key='{{index}}' wx:if="{{item.used == false && item.overdue == false}}">
             <view class="yhj-block clearfix">
                 <view class="col-xs-3 money p0"><text class="small">￥</text>{{item.denomination}}</view>
@@ -18,7 +17,6 @@
                 </view>
             </view>
         </view>
-         
     </swiper-item>  
 
     <!-- 已使用 -->  
