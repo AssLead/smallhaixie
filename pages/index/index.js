@@ -20,7 +20,7 @@ Page({
     wx.request({
       url: config.carouselImage,
       data: {
-        // "pkScenic": 29
+        
       },
       method: 'POST',
       header: {
@@ -29,22 +29,21 @@ Page({
       success: function (res) {
         wx.hideToast();
         var data = res.data;
-        // console.log(res.data.data);
-        if (data.status == "SUCCESS") {
-          // var profile = data.data.scProfile;
-          // var logo = config.host + data.result;
-
+        console.log(res.data);
+        // if (data.msg == "成功") {
+  
           that.setData({
+            imgUrls:  + res.data.list.bannerName,
             // profile: profile && (profile.slice(0, 40) + "..."),
             // logo: logo,
-   
-            data: {
-              imgUrls: [
-                config.host + data.result.ad_code.banner.ad_code
-              ]
-            },
+                
+            // data: {
+            //   list: [
+            //     config.imageUrl + data.bannerName
+            //   ]
+            // },
           });
-        }
+        // }
 
       }
     });

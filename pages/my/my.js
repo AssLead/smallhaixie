@@ -26,17 +26,25 @@ Page({
           },
           {
             name: '我的订单',
+<<<<<<< HEAD
+            page: '../goods/goods',
+=======
             page: '../old/old',
+>>>>>>> 00f7c95a15ff9865a7706b2ca3cd633c360db53d
             arrow: '../../images/icon_my_orderform.png'
           },
           {
             name: '金融投资',
-            page: '',
+            page: '../goods/goods',
             arrow: '../../images/icon_my_invest.png'
           },
           {
             name: '设置',
+<<<<<<< HEAD
+            page: '../goods/goods',
+=======
             page: '../setting/setting',
+>>>>>>> 00f7c95a15ff9865a7706b2ca3cd633c360db53d
             arrow: '../../images/icon_my_setting.png'
           },
           {
