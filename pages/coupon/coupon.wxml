@@ -7,116 +7,52 @@
 <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 50}}px" bindchange="bindChange">  
     <!-- 未使用-->  
     <swiper-item>  
-        <view class="yhj-tab clearfix">
+        <view wx:for="{{couponlist}}" class="yhj-tab clearfix" data-key='{{index}}'>
+        <view wx:for="{{couponlist}}" class="yhj-tab clearfix" data-key='{{index}}' wx:if="{{item.used == false && item.overdue == false}}">
             <view class="yhj-block clearfix">
-                <view class="col-xs-3 money p0"><text class="small">￥</text>5</view>
+                <view class="col-xs-3 money p0"><text class="small">￥</text>{{item.denomination}}</view>
                 <view class="col-xs-9 bak pr0 clearfix">
                     <view class="yhj-name">罗湖海归协会红包</view>
-                    <view class="yhj-time">20170612-20170615   使用</view>
+                    <view class="yhj-time">{{item.deadline}} 前使用</view>
                     <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
                 </view>
-            </view> 
-        </view>
-
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="col-xs-3 money p0"><text class="small">￥</text>15</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name">罗湖海归协会红包</view>
-                    <view class="yhj-time">20170612-20170615   使用</view>
-                    <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
-        </view>
-
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="col-xs-3 money p0"><text class="small">￥</text>30</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name">罗湖海归协会红包</view>
-                    <view class="yhj-time">20170612-20170615   使用</view>
-                    <view class="yhj-note">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
+            </view>
         </view>
          
     </swiper-item>  
 
     <!-- 已使用 -->  
     <swiper-item>  
-        <view class="yhj-tab clearfix">
+
+
+        <view class="yhj-tab clearfix" wx:for="{{couponlist}}" data-key='{{index}}' wx:if="{{item.used == true}}">
             <view class="yhj-block clearfix">
                 <view class="syicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>5</view>
+                <view class="col-xs-3 money e0"><text class="small">￥</text>{{item.denomination}}</view>
                 <view class="col-xs-9 bak pr0 clearfix">
                     <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
+                    <view class="yhj-time e0">{{item.deadline}} 前使用</view>
                     <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
                 </view>
             </view> 
         </view>
 
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="syicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>15</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
-                    <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
-        </view>
-
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="syicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>30</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
-                    <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
-        </view>
+        
     </swiper-item>  
 
     <!-- 已过期 -->  
     <swiper-item>  
-        <view class="yhj-tab clearfix">
+        <view class="yhj-tab clearfix" wx:for="{{couponlist}}" data-key='{{index}}' wx:if="{{item.overdue == true}}">
             <view class="yhj-block clearfix">
                 <view class="gqicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>5</view>
+                <view class="col-xs-3 money e0"><text class="small">￥</text>{{item.denomination}}</view>
                 <view class="col-xs-9 bak pr0 clearfix">
                     <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
+                    <view class="yhj-time e0">{{item.deadline}} 前使用</view>
                     <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
                 </view>
             </view> 
         </view>
 
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="gqicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>5</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
-                    <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
-        </view>
-
-        <view class="yhj-tab clearfix">
-            <view class="yhj-block clearfix">
-                <view class="gqicon"></view>
-                <view class="col-xs-3 money e0"><text class="small">￥</text>5</view>
-                <view class="col-xs-9 bak pr0 clearfix">
-                    <view class="yhj-name e0">罗湖海归协会红包</view>
-                    <view class="yhj-time e0">20170612-20170615   使用</view>
-                    <view class="yhj-note e0">注：仅限罗湖海归协会内活动使用</view>
-                </view>
-            </view> 
-        </view>
     </swiper-item>  
 </swiper>  

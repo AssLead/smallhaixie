@@ -1,3 +1,4 @@
+
 /**app.wxss**/
 .clearfix {
   overflow: auto;
@@ -13,3 +14,6 @@
     display:none!important;
 }
 
+page {
+	color: #484848;
+}

@@ -1,0 +1,38 @@
+<section class="sec10">
+    <view class="container">
+        <view class="message-title f18px">留言</view>
+          
+	    <view class="message-block xh1-small2">
+              <view class="follow-headimg pull-left">
+              	<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
+              </view>
+              <view class=" imgtitle ">方先生</view>
+              <view class=" f10px ">
+              	两小时前
+              </view>
+              <view class="message-note">我可以带我一个朋友来吗？他很厉害的。</view>
+        </view>
+
+        <view class="message-block xh1-small2">
+              <view class="follow-headimg pull-left">
+              	<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
+              </view>
+              <view class=" imgtitle ">方先生</view>
+              <view class=" f10px ">
+              	两小时前
+              </view>
+              <view class="message-note">我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的我可以带我一个朋友来吗？他很厉害的。</view>
+        </view>
+
+        <view class="message-block xh1-small2">
+              <view class="follow-headimg pull-left">
+              	<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
+              </view>
+              <view class=" imgtitle ">方先生</view>
+              <view class=" f10px ">
+              	两小时前
+              </view>
+              <view class="message-note">我可以带我一个朋友来吗？他很厉害的。</view>
+        </view>
+    </view>
+</section>

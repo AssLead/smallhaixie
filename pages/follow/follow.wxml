@@ -1,6 +1,17 @@
 <view class="container">
     <view class="follow">
-	    <view class="follow-block">
+
+		<view wx:for="{{followlist}}" class="follow-block" data-key='{{index}}'>
+            <view class="pull-right ">
+	        	<view class="bcf follow-btn" bindtap="deleteFollow" data-id="{{item.id}}">取消关注</view>
+	        </view>
+	        <view class="follow-headimg1 pull-left">
+	        	<image mode="scaleToFill" class="shopimg" src="../../images/head1.png"></image>
+	        </view>
+	        <view class="follow-name">{{item.id}}</view>
+        </view>
+
+	    <!-- <view class="follow-block">
 	        <view class="pull-right ">
 	        	<view class="bcf follow-btn">取消关注</view>
 	        </view>
@@ -38,6 +49,6 @@
 	        	<image mode="scaleToFill" class="shopimg" src="../../images/head3.png"></image>
 	        </view>
 	        <view class="follow-name">我的关注好友</view>
-	    </view>
+	    </view> -->
     </view>
 </view>

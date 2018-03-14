@@ -15,5 +15,10 @@ Page({
   },
   onUnload: function () {
     // 页面关闭
+  },
+  note: function() {
+    wx.navigateTo({
+      url: '../note/note'
+    })
   }
 })

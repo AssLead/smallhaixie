@@ -19,6 +19,11 @@
     "pages/address1/address1",
     "pages/address2/address2",    
     "pages/about/about",
+    "pages/setting/setting",
+    "pages/tag/tag",
+    "pages/note/note",
+    "pages/message/message",
+    "pages/xh-note/xh-note",
     "pages/logs/logs"
   ],
   "window": {
