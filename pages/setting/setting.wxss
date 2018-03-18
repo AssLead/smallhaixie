@@ -82,3 +82,7 @@ image {
     width: 108px;
     border: 0!important;
 }
+.picker {
+    font-size: 14px;
+    line-height:2em;
+}

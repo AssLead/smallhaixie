@@ -1,5 +1,5 @@
 <view class="edit-nem-img">
-	<image mode="scaleToFill" class="" src="../../images/set_02.jpg" style="height: 200px"></image>
+	<image mode="scaleToFill" class="" src="{{tempFilePaths}}" style="height: 200px"></image>
   	<span>
   		<image mode="scaleToFill" bindtap="chooseimg"  class="" src="../../images/phone.png" style="width:24px;height: 24px"></image>
   	</span>
@@ -9,27 +9,36 @@
 	<form action="" bindsubmit="formSubmit">
 	    <view class="section">
 		    <view class="section__title">名字</view>
-		    <input placeholder="" class="edit-input" value="刘德华" />
+		    <input placeholder="" class="edit-input" value="" name="name" />
 		</view>
-		<view class="edit-line">
+		<view class="section">
+		    <view class="section__title">简介</view>
+		    <input placeholder="关于我" class="edit-input" value="" name="introduce" />
+		</view>
+		<!-- <view class="edit-line">
 			<span class="pull-right"><a href="javascript:;" class="bcf">编辑</a></span>关于我
-		</view>
+		</view> -->
 		<view class="f14px mgtb25">私人信息</view>
 		<view class="section">
 		    <view class="section__title">性别</view>
-		    <input placeholder="" class="edit-input" value="女" />
+		    <input placeholder="" class="edit-input" value="" name="sex" />
 		</view>
 		<view class="section">
 		    <view class="section__title">婚否</view>
-		    <input placeholder="" class="edit-input" value="未婚" />
+		    <picker bindchange="bindPickerChange" value="{{index}}" range="{{marriage}}">
+			    <view class="picker">
+			      {{marriage[index]}}
+			    </view>
+			 </picker>
+		    <!-- <input placeholder="" class="edit-input" value="未婚" name="marriage" /> -->
 		</view>
 		<view class="section">
 		    <view class="section__title">手机</view>
-		    <input type="number" maxlength="11" placeholder="" value="15012345678" class="edit-input" />
+		    <input type="number" maxlength="11" name="phone" value="" class="edit-input" />
 		</view>
 		<view class="section">
 		    <view class="section__title">从事行业</view>
-		    <input placeholder="" class="edit-input" value="会计" />
+		    <input placeholder="" class="edit-input" value="" name="industry" />
 		</view>
 
 		<view class="f14px mgtb25">兴趣爱好</view>
@@ -41,10 +50,6 @@
             	<span wx:for="{{tag}}" data-key='{{index}}' wx:if="{{item.state == 1}}" class="edit-btn">{{item.name}}</span>
 		    	<!-- <span class="pull-right {{item.state==1?'add-right':''}}" ></span>{{item.name}} -->
 			</view>
-            <!-- <view class="edit-lb">
-				<span class="edit-btn">游泳</span>
-              	<span class="edit-btn">游泳</span>
-            </view> -->
         </view>
 
         <view class="edit-l">

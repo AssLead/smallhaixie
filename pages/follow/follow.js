@@ -23,6 +23,8 @@ Page({
       })
     });
 
+    showView: (options.showView == "true" ? true : false) 
+
 
     // getFollow
     var requestUrl = "getFollow";
@@ -39,9 +41,11 @@ Page({
         if (res.code == 'success') {
             var followlist = res.list[0].fBean;
             console.log(followlist);
+             
             that.setData({  
                 followlist: followlist
-            })  
+            }); 
+            
             wx.hideLoading();
         } else {
           wx.hideLoading();
@@ -67,17 +71,30 @@ Page({
         userId:userId,
         followId:followId
     };
+    console.log(e.target);
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
         wx.showLoading({})
         if (res.code == 'success') {
-            // var followlist = res.list[0].fBean;
-            // console.log(followlist);
-            // that.setData({  
-            //     followlist: followlist
-            // })  
-            wx.hideLoading();
+            wx.showLoading({})
+            /*wx.showModal({
+              title: '提示',
+              content: '取消关注成功',
+              showCancel:false,
+            })*/
+            
+            var pages = getCurrentPages()    //获取加载的页面
+
+            var currentPage = pages[pages.length-1]    //获取当前页面的对象
+
+            var url = currentPage.route
+
+            wx.redirectTo({
+              url: '/' + url
+            })
+
+            // wx.hideLoading();
         } else {
           wx.hideLoading();
         }

@@ -1,4 +1,4 @@
-// pages/xh-note/xh-note.js
+// pages/xh-hd/xh-hd.js
 Page({
 
   /**
@@ -7,9 +7,6 @@ Page({
   data: {
     areaArray: ['美国', '中国', '巴西', '日本'],
     typeArray: ['文化', '艺术', '运动', '招聘'],
-
-
-
   },
 
   /**
@@ -25,11 +22,10 @@ Page({
   onReady: function () {
   
   },
-
-  bindPickerChange1: function(e) {
+  bindDateChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index1: e.detail.value
+      date: e.detail.value
     })
   },
   bindPickerChange2: function(e) {
@@ -37,12 +33,5 @@ Page({
     this.setData({
       index2: e.detail.value
     })
-  },
-  returnIndex: function() {
-    
-    wx.redirectTo({
-      url: '../index/index',
-    })
-
   },
 })

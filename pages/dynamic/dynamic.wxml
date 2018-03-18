@@ -1,7 +1,7 @@
 <view class="container">
      
-    <view class="h-dt-block clearfix" bindtap="note">
-        <view class="follow-headimg pull-left">
+    <view class="h-dt-block clearfix" >
+        <view class="follow-headimg pull-left" >
             <image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg"></image>
         </view>
         <view class="pull-left imgtitle">方先生
@@ -9,13 +9,13 @@
         </view>
         <!-- <view class="clearfix"></view> -->
         <view class="h-dt-title">我发布了一个活动，快来参加吧！</view>
-        <view class="h-dt-note">
+        <view class="h-dt-note" bindtap="note">
             <view>
               <image mode="scaleToFill" class="" src="../../images/lsqyimg.jpg" style="height: 166px"></image>
               <view class="h-dt-t">深圳体育馆羽毛球比赛</view>
             </view>
         </view> 
-        <view class="pull-right mgt1em"><view class="bcf fz14">罗湖区海归协会</view></view>
+        <view class="pull-right mgt1em" bindtap="xhnote"><view class="bcf fz14">罗湖区海归协会</view></view>
     </view>
 
      <view class="h-dt-block clearfix">

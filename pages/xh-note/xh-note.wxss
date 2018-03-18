@@ -11,6 +11,7 @@ image {
 page {
 	background: #f3f3f3;
 	    color: #484848;
+	    padding-bottom: 4.55em;
 }
 .container {
     padding-right: 20px;
@@ -101,4 +102,113 @@ page {
 .col-xs-6 {
     width: 49%;
     float: left;
+}
+.hdc-block {
+    position: relative;
+    background: #fff;
+}
+.testimg {
+	height: 220px;
+}
+.hd-num {
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    padding: 2px 15px;
+    color: #fff;
+    top: 20px;
+    left: 0;
+    border-radius: 0 1em 1em 0;
+    font-size: 14px;
+}
+.hd-t {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.hd-small {
+    color: #666;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.hd-time {
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 4em;
+    font-size: 14px;
+}
+.hd-time .time-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
+    float: left;
+    margin-top: -2px;
+}
+.timeimg {
+	height: 20px;
+}
+.hd-address {
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 4em;
+    font-size: 14px;
+}
+.hd-address .address-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 1em;
+    float: left;
+    margin-top: -2px;
+}
+.addressimg {
+	height: 26px;
+}
+.hd-btn {
+    width: 92%;
+    line-height: 2.2em;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #00a69a;
+    border-radius: 5px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    background: #00a69a;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.pt0 {
+	padding-top: 0;
+}
+
+.hdc-block:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: #f3f3f3;
+    border-top: 1px solid #e0e0e0;
+    display: block;
+}
+
+.c-home {
+    line-height: 54px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    background: #fff;
+    font-size: 14px;
+}
+
+.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.bcf {
+    color: #00a69a !important;
 }

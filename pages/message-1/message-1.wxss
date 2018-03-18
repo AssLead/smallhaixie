@@ -1,0 +1,100 @@
+.message-title {
+    margin: 25px 0;
+}
+
+.f18px {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+.message-block {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+.follow-headimg image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+.imgtitle {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+.imgtitle small {
+    font-size: 12px;
+    color: #c4c4c4;
+    font-weight: normal;
+    margin-top: -2px;
+    display: block;
+    margin-top: 5px;
+}
+.f10px {
+    font-size: 10px !important;
+}
+.message-note {
+	width: 100%;
+	float: left;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.message-note-b {
+    padding: 10px;
+    width: 100%;
+    background: #f3f3f3;
+    position: relative;
+}
+.admin_message {
+    line-height: 2em;
+    margin-top: 1em;
+}
+strong {
+    font-weight: 700;
+}
+page {
+	background:#fff;
+}
+.message-note-b:before {
+    content: '';
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 11px solid #f3f3f3;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    left: 14px;
+}
+
+.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.fb-bg {
+    background: #fff;
+    padding: 7px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.footer-btn {
+    width: 92%;
+    line-height: 2.2em;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #ea5e5d;
+    border-radius: 5px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    background: #ea5e5d;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+}

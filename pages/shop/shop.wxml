@@ -2,67 +2,76 @@
   <view class="item_header">
     <view class='v'>
       <text class="name">{{userInfo.nickName}}</text>
-      <text class='sign'>1500积分</text>
+      <text class='sign'>{{integral}}积分</text>
     </view>
     <image class="headimg" src="{{userInfo.avatarUrl}}" />
   </view>
 
   <view class="shop-list text-center clearfix">
-       
-    <view class="shop-block col-xs-6">
 
+    <view wx:for="{{shopArray}}" class="shop-block col-xs-6" data-key='{{index}}' data-type="{{item.type}}" bindtap="shoplist" >
+        <view  hover-class="" class="pay-pirce" >
+          <view class="bor1">
+             <image mode="scaleToFill" class="shopimg" src="{{item.arrow}}"></image>
+          </view>
+          <view class="f14px mgt5 fwb shopname">{{item.name}}</view>
+        </view>
+    </view>
+       
+    <!-- <view class="shop-block col-xs-6">
+    
         <navigator url="../shoplist/shoplist" hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/shop1.jpg"></image>
           </view>
-          <view class="f14px mgt5 fwb shopname">电子产品电子产品电子产品电子产品电子产品</view>
+          <view class="f14px mgt5 fwb shopname">电子产品</view>
         </navigator>
-
+    
     </view>
-
+    
     <view class="shop-block col-xs-6">
-
+    
         <navigator url="../shoplist/shoplist" hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/shop2.jpg"></image>
           </view>
           <view class="f14px mgt5 fwb shopname">生活用品</view>
         </navigator>
-
+    
     </view>
-
+    
     <view class="shop-block col-xs-6">
-
+    
         <navigator url="../shoplist/shoplist" hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/shop3.jpg"></image>
           </view>
           <view class="f14px mgt5 fwb shopname">零食</view>
         </navigator>
-
+    
     </view>
-
+    
     <view class="shop-block col-xs-6">
-
+    
         <navigator url="../shoplist/shoplist" hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/shop4.jpg"></image>
           </view>
           <view class="f14px mgt5 fwb shopname">家具用品</view>
         </navigator>
-
+    
     </view>
-
+    
     <view class="shop-block col-xs-6">
-
+    
         <navigator url="../shoplist/shoplist" hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/shop5.jpg"></image>
           </view>
           <view class="f14px mgt5 fwb shopname">优惠券</view>
         </navigator>
-
-    </view>
+    
+    </view> -->
   </view>
 
 

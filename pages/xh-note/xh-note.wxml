@@ -57,41 +57,77 @@
 <view class="xh-chage clearfix">
 	<view class="col-xs-6 p00" style="position: relative;border-right: 1px solid #e0e0e0;">
 		<view class="section">
-			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<picker bindchange="bindPickerChange1" value="{{index1}}" range="{{areaArray}}">
 			    <view class="picker">
-			      活动地区：{{array[index]}}
+			      活动地区：{{areaArray[index1]}}
 			    </view>
 			</picker>
 		</view>
     </view>
     <view class="col-xs-6 p00">
     	<view class="section">
-			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<picker bindchange="bindPickerChange2" value="{{index2}}" range="{{typeArray}}">
 			    <view class="picker">
-			      活动地区：{{array[index]}}
+			      活动类型：{{typeArray[index2]}}
 			    </view>
 			</picker>
 		</view>
     </view>
-    <!-- <div class="col-xs-6 p00" style="position: relative;border-right: 1px solid #e0e0e0;">
-    </div>
-    <div class="col-xs-6 p00" style="position: relative;">
-      <a href="javascript:;" class="xh-ca">活动类型 <i class="fa fa-angle-down"></i></a>
-      <ul class="xh-chage-ul" style="display: none;">
-        <li><a href="javascript:;">康乐</a></li>
-        <li><a href="javascript:;">文化</a></li>
-        <li><a href="javascript:;">艺术</a></li>
-        <li><a href="javascript:;">运动</a></li>
-        <li><a href="javascript:;">培训</a></li>
-        <li><a href="javascript:;">招聘</a></li>
-        <li><a href="javascript:;">企业走访</a></li>
-        <li><a href="javascript:;">资源对接</a></li>
-        <li><a href="javascript:;">政府资源</a></li>
-        <li><a href="javascript:;">国外走访</a></li>
-        <li><a href="javascript:;">协会大事</a></li>
-        <li><a href="javascript:;">慈善</a></li>
-        <li><a href="javascript:;">创业</a></li>
-      </ul>
-    </div>
-      <div class="clearfix"></div> -->
 </view>
+
+<view class="hd-tab">
+    <view class="hdc-block">
+    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
+        <view class="hd-num">已报名：6人</view>
+        <view class="container pt0">
+          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
+          	<view class="hd-small">限制人数8人</view>
+          	<view class="hd-time">
+          		<view class="time-icon">
+    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+          		</view>
+	          	2017-12-17(星期五) 13:00
+	      	</view>
+          	<view class="hd-address">
+          		<view class="address-icon">
+    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+          		</view>
+	          	深圳.深圳体育馆
+	        </view>
+          	<view class="btn hd-btn">
+          		<view style="color: #fff">立即报名</view>
+          	</view>
+        </view>
+    </view>
+
+    <view class="hdc-block">
+    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
+        <view class="hd-num">已报名：6人</view>
+        <view class="container pt0">
+          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
+          	<view class="hd-small">限制人数8人</view>
+          	<view class="hd-time">
+          		<view class="time-icon">
+    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+          		</view>
+	          	2017-12-17(星期五) 13:00
+	      	</view>
+          	<view class="hd-address">
+          		<view class="address-icon">
+    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+          		</view>
+	          	深圳.深圳体育馆
+	        </view>
+          	<view class="btn hd-btn">
+          		<view style="color: #fff">立即报名</view>
+          	</view>
+        </view>
+    </view>    
+</view>
+
+<!-- <view class="c-home navbar-fixed-bottom" bindtap="returnIndex">
+	<view class="bcf "> 
+    	<image mode="scaleToFill" class="addressimg" src="../../images/icon/home-icon1-ac.png" style="width: 20px;height: 17px;margin-top: -4px;margin-right: 2px;"></image>
+  		返回首页
+  	</view>
+</view> -->

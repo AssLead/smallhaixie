@@ -6,14 +6,14 @@ Page({
    */
   data: {
     dates:[
-        { "name": "十三", "state": 1 },
-        { "name": "十四", "state": 0 },
-        { "name": "十五", "state": 0 },
-        { "name": "十六", "state": 0 },
-        { "name": "十七", "state": 0 },
-        { "name": "十8", "state": 0 },
-        { "name": "十9", "state": 0 },
-        { "name": "十0", "state": 0 },
+        { "name": "游泳", "state": 1 },
+        { "name": "羽毛球", "state": 0 },
+        { "name": "足球", "state": 0 },
+        { "name": "跆拳道", "state": 0 },
+        { "name": "骑马", "state": 0 },
+        { "name": "拳击", "state": 0 },
+        { "name": "郊游", "state": 0 },
+        { "name": "射击", "state": 0 },
     ],  
   },
 

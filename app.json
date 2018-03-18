@@ -23,7 +23,10 @@
     "pages/tag/tag",
     "pages/note/note",
     "pages/message/message",
+    "pages/message-1/message-1",
     "pages/xh-note/xh-note",
+    "pages/xh-hd/xh-hd",
+    "pages/xh-dongtai/xh-dongtai",
     "pages/logs/logs"
   ],
   "window": {

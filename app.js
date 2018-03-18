@@ -64,11 +64,13 @@ App({
                       success: function(res){
                         console.log(res);
                         wx.setStorageSync('userDetail', res.data.list[0]);
-                        that.globalData.userDetail = res.data.list[0]
+                        that.globalData.userDetail = res.data.list[0];
+                        console.log(that.globalData.userDetail)
                         typeof cb == "function" && cb(that.globalData.userDetail);
                         wx.redirectTo({
                           url: '/' + url
                         })
+                        wx.hideLoading();
                       }
                   })
                 }
@@ -77,7 +79,7 @@ App({
           }
         },
       });
-    }
+    } 
   },
   globalData: {
     userInfo: null,

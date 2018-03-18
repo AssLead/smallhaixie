@@ -20,5 +20,11 @@ Page({
     wx.navigateTo({
       url: '../note/note'
     })
-  }
+  },
+  xhnote: function() {
+    wx.navigateTo({
+      url: '../xh-note/xh-note'
+    })
+  },
+  
 })

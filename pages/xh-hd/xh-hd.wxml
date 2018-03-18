@@ -1,0 +1,71 @@
+<view class="xh-chage clearfix">
+	
+    <view class="col-xs-6 p00" style="position: relative;border-right: 1px solid #e0e0e0;">
+    	<view class="section">
+			<picker bindchange="bindPickerChange2" value="{{index2}}" range="{{typeArray}}">
+			    <view class="picker">
+			      活动类型：{{typeArray[index2]}}
+			    </view>
+			</picker>
+		</view>
+    </view>
+    <view class="col-xs-6 p00" >
+		<view class="section">
+			<picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="bindDateChange">
+			    <view class="picker">
+			      活动日期: {{date}}
+			    </view>
+			</picker>
+		</view>
+    </view>
+</view>
+
+<view class="hd-tab">
+    <view class="hdc-block">
+    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
+        <view class="hd-num">已报名：6人</view>
+        <view class="container pt0">
+          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
+          	<view class="hd-small">限制人数8人</view>
+          	<view class="hd-time">
+          		<view class="time-icon">
+    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+          		</view>
+	          	2017-12-17(星期五) 13:00
+	      	</view>
+          	<view class="hd-address">
+          		<view class="address-icon">
+    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+          		</view>
+	          	深圳.深圳体育馆
+	        </view>
+          	<view class="btn hd-btn">
+          		<view style="color: #fff">立即报名</view>
+          	</view>
+        </view>
+    </view>
+
+    <view class="hdc-block">
+    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
+        <view class="hd-num">已报名：6人</view>
+        <view class="container pt0">
+          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
+          	<view class="hd-small">限制人数8人</view>
+          	<view class="hd-time">
+          		<view class="time-icon">
+    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+          		</view>
+	          	2017-12-17(星期五) 13:00
+	      	</view>
+          	<view class="hd-address">
+          		<view class="address-icon">
+    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+          		</view>
+	          	深圳.深圳体育馆
+	        </view>
+          	<view class="btn hd-btn">
+          		<view style="color: #fff">立即报名</view>
+          	</view>
+        </view>
+    </view>    
+</view>
