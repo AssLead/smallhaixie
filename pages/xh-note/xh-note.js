@@ -45,4 +45,34 @@ Page({
     })
 
   },
+  huodong: function() {
+    wx.navigateTo({
+      url: '../xh-hd/xh-hd'
+    })
+  },
+  dongtai: function() {
+    wx.navigateTo({
+      url: '../xh-dongtai/xh-dongtai'
+    })
+  },
+  liuyanban: function() {
+    wx.navigateTo({
+      url: '../message-1/message-1'
+    })
+  },
+  shequ: function() {
+    wx.navigateTo({
+      url: '../xh-sq/xh-sq'
+    })
+  },
+  qiye: function() {
+    wx.navigateTo({
+      url: '../qiye/qiye'
+    })
+  },
+  shangcheng: function() {
+    wx.navigateTo({
+      url: '../shop/shop'
+    })
+  },
 })

@@ -26,27 +26,27 @@
       </view>
 
       <view class="xh-icons clearfix">
-        <view class="xh-iconsa">
+        <view class="xh-iconsa" bindtap="huodong">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons1.png" ></image>活动
         </view>
-		<view class="xh-iconsa">
+		    <view class="xh-iconsa" bindtap="dongtai">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons2.png" ></image>动态
         </view>
-        <view class="xh-iconsa">
+        <view class="xh-iconsa" bindtap="liuyanban">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons3.png" ></image>留言板
         </view>
-        <view class="xh-iconsa">
+        <view class="xh-iconsa" bindtap="shequ">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons4.png" ></image>社区
         </view>
       </view>
       <view class="xh-icons clearfix">
-      	<view class="xh-iconsa">
+      	<view class="xh-iconsa" bindtap="qiye">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons5.png" ></image>理事企业
         </view>
-        <view class="xh-iconsa">
+        <view class="xh-iconsa" bindtap="">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons6.png" ></image>慈善拍卖
         </view>
-        <view class="xh-iconsa">
+        <view class="xh-iconsa" bindtap="shangcheng">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icons7.png" ></image>商城
         </view>
       </view>

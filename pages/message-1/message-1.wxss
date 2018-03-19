@@ -54,6 +54,7 @@ strong {
 }
 page {
 	background:#fff;
+    padding-bottom: 5.5em;
 }
 .message-note-b:before {
     content: '';

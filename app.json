@@ -27,6 +27,8 @@
     "pages/xh-note/xh-note",
     "pages/xh-hd/xh-hd",
     "pages/xh-dongtai/xh-dongtai",
+    "pages/xh-sq/xh-sq",
+    "pages/qiye/qiye",
     "pages/logs/logs"
   ],
   "window": {
