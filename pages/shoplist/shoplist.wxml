@@ -1,80 +1,21 @@
 <view class="">
-  <view class=" text-center f18px mgtb2500">生活用品</view>
+  <view class=" text-center f18px mgtb2500">{{typeName}}</view>
 
-  	<!-- <view class='hotgoodcontainer'>
-  		  	<view class='gooditem' wx:for="{{hotgoods}}" wx:for-index="idx" wx:for-item="good">
-  			    <view class='imgview'>
-  			      <image class='productimg' src='{{good.pic_url}}'/>
-  			    </view>
-  			    <view>{{good.name}}</view>
-  		  	</view>
-  		<view> -->
 
   <view class="shop-list text-center clearfix">
        
-    <view class="shop-block col-xs-6">
+    <view class="shop-block col-xs-6" wx:for="{{shoplist}}" data-key='{{index}}' data-type="{{item.type}}" data-id="{{item.id}}" bindtap="shopdetail">
 
-        <navigator url="../goods/goods" hover-class="" class="pay-pirce">
+        <view  hover-class="" class="pay-pirce">
           <view class="bor1">
              <image mode="scaleToFill" class="shopimg" src="../../images/p/p1.png"></image>
           </view>
-          <view class="f14px mgt5 shopname">电子产品</view>
-          <view class="f12px"><text>￥2900元+30积分</text> 购买 </view>
-        </navigator>
+          <view class="f14px mgt5 shopname">{{item.name}}</view>
+          <view class="f12px"><text>￥{{item.mony}}元+{{item.integral}}积分</text> 购买 </view>
+        </view>
 
     </view>
 
-    <view class="shop-block col-xs-6">
-
-        <navigator url="../goods/goods" hover-class="" class="pay-pirce">
-          <view class="bor1">
-             <image mode="scaleToFill" class="shopimg" src="../../images/p/p2.png"></image>
-          </view>
-          <view class="f14px mgt5 ">生活用品</view>
-          <view class="f12px"><text>￥2900元+30积分</text> 购买 </view>
-
-        </navigator>
-
-    </view>
-
-    <view class="shop-block col-xs-6">
-
-        <navigator url="../goods/goods" hover-class="" class="pay-pirce">
-          <view class="bor1">
-             <image mode="scaleToFill" class="shopimg" src="../../images/p/p3.png"></image>
-          </view>
-          <view class="f14px mgt5 ">零食</view>
-          <view class="f12px"><text>￥2900元+30积分</text> 购买 </view>
-
-        </navigator>
-
-    </view>
-
-    <view class="shop-block col-xs-6">
-
-        <navigator url="../goods/goods" hover-class="" class="pay-pirce">
-          <view class="bor1">
-             <image mode="scaleToFill" class="shopimg" src="../../images/p/p4.png"></image>
-          </view>
-          <view class="f14px mgt5 ">家具用品</view>
-          <view class="f12px"><text>￥2900元+30积分</text> 购买 </view>
-
-        </navigator>
-
-    </view>
-
-    <view class="shop-block col-xs-6">
-
-        <navigator url="../goods/goods" hover-class="" class="pay-pirce">
-          <view class="bor1">
-             <image mode="scaleToFill" class="shopimg" src="../../images/p/p5.png"></image>
-          </view>
-          <view class="f14px mgt5 ">优惠券</view>
-          <view class="f12px"><text>￥2900元+30积分</text> 购买 </view>
-
-        </navigator>
-
-    </view>
   </view>
 
 

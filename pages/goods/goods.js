@@ -1,18 +1,52 @@
-// pages/goods/goods.js
+
+var app = getApp();
+var request = require("../../utils/request.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    type: '',
+    typeName: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.showLoading({})
+    var that=this;
+    
+    that.setData({
+      id:options.id,
+    })
+
+    // findCommodity
+    var requestUrl = "findCommodity";
+    var that = this;
+
+    var jsonData = {
+        id:that.data.id,
+    };
+
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        wx.showLoading({})
+        if (res.code == 'success') {
+            var shopdetail = res.list[0];
+            console.log(shopdetail);
+             
+            that.setData({  
+                shopdetail: shopdetail
+            }); 
+            
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
+        }
+      }
+    )
   },
 
   /**
@@ -21,46 +55,11 @@ Page({
   onReady: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  shopdetail: function (e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id)
+      wx.navigateTo({
+        url: '../goods/goods?id=' + id
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

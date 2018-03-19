@@ -3,20 +3,20 @@
 </view>
 
 <view class="container">
-    <view class="f18px mgtb2500">罗湖区海归协会优惠券</view>
+    <view class="f18px mgtb2500">{{shopdetail.name}}</view>
     <view class="f14px">仅参加该协会的活动时可使用</view>
     <view class="w100line"></view>
     <view class="f14px">使用时间</view>
-    <view class="f12px">20170613-20180613</view>
+    <view class="f12px">{{shopdetail.startDate}}-{{shopdetail.endDate}}</view>
     <view class="w100line"></view>
-    <view class="f14px">权益介绍</view>
+    <view class="f14px">{{shopdetail.commodityInfo}}</view>
     <view class="f12px">请在在有效期中使用</view>
     <view class="w100line"></view>
 
 </view>
 <view class="navbar-fixed-bottom">
 	<view class="fb-bg">
-	    <button class="footerbtn" size="default" plain="false" >500 积分兑换</button>
+	    <button class="footerbtn" size="default" plain="false" >{{shopdetail.mony}}元+{{shopdetail.integral}}积分兑换</button>
 	</view>
 
 </view>

@@ -9,7 +9,7 @@
 	<form action="" bindsubmit="formSubmit">
 	    <view class="section">
 		    <view class="section__title">名字</view>
-		    <input placeholder="" class="edit-input" value="" name="name" />
+		    <input placeholder="" class="edit-input" value="{{userDetail.name}}" name="name" />
 		</view>
 		<view class="section">
 		    <view class="section__title">简介</view>
@@ -21,7 +21,7 @@
 		<view class="f14px mgtb25">私人信息</view>
 		<view class="section">
 		    <view class="section__title">性别</view>
-		    <input placeholder="" class="edit-input" value="" name="sex" />
+		    <input placeholder="" class="edit-input" value="{{userDetail.sex}}" name="sex" />
 		</view>
 		<view class="section">
 		    <view class="section__title">婚否</view>
@@ -30,15 +30,14 @@
 			      {{marriage[index]}}
 			    </view>
 			 </picker>
-		    <!-- <input placeholder="" class="edit-input" value="未婚" name="marriage" /> -->
 		</view>
 		<view class="section">
 		    <view class="section__title">手机</view>
-		    <input type="number" maxlength="11" name="phone" value="" class="edit-input" />
+		    <input type="number" maxlength="11" name="phone" value="{{userDetail.phone}}" class="edit-input" />
 		</view>
 		<view class="section">
 		    <view class="section__title">从事行业</view>
-		    <input placeholder="" class="edit-input" value="" name="industry" />
+		    <input placeholder="" class="edit-input" value="{{userDetail.industry}}" name="industry" />
 		</view>
 
 		<view class="f14px mgtb25">兴趣爱好</view>

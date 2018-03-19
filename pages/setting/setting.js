@@ -35,6 +35,15 @@ Page({
     });
 
     var userDetail = wx.getStorageSync('userDetail');
+    if(userDetail.marriage == "true") {
+      that.setData({
+        index: 0
+      })
+    } else {
+      that.setData({
+        index: 1
+      })
+    }
     that.setData({
       userDetail: userDetail
     })

@@ -8,13 +8,37 @@ Page({
    */
   data: {
     type: '',
+    typeName: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({})
     var that=this;
+    // 0=电子产品 1=生活用平 2=零食 3=家具用平 4=优惠券
+    if (options.type == 0) {
+      that.setData({
+        typeName:'电子产品',
+      })
+    } else if (options.type == 1) {
+      that.setData({
+        typeName:'生活用品',
+      })
+    } else if (options.type == 2) {
+      that.setData({
+        typeName:'零食',
+      })
+    } else if (options.type == 3) {
+      that.setData({
+        typeName:'家具用品',
+      })
+    } else if (options.type == 4) {
+      that.setData({
+        typeName:'优惠券',
+      })
+    }
     that.setData({
       type:options.type,
     })
@@ -30,18 +54,18 @@ Page({
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
         wx.showLoading({})
-        /*if (res.code == 'success') {
-            var followlist = res.list[0].fBean;
-            console.log(followlist);
+        if (res.code == 'success') {
+            var shoplist = res.list;
+            console.log(shoplist);
              
             that.setData({  
-                followlist: followlist
+                shoplist: shoplist
             }); 
             
             wx.hideLoading();
         } else {
           wx.hideLoading();
-        }*/
+        }
       }
     )
   },
@@ -52,5 +76,11 @@ Page({
   onReady: function () {
   
   },
-
+  shopdetail: function (e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id)
+      wx.navigateTo({
+        url: '../goods/goods?id=' + id
+      })
+  },
 })
