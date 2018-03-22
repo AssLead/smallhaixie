@@ -8,7 +8,65 @@ image.slide-image {
 }
 
 .addxie {
-  margin-top: 13px;
+  margin: 13px 26px;
   text-align: center;
   font-size: 15px;
+}
+
+.list-three {
+    padding: 15px;
+    border: 1px solid #dae3e4;
+    color: #484848;
+    background: #fff;
+    margin: 10px 0;
+    border-radius: 8px;
+    /*box-shadow: 0 0 5px #e0e0e0;*/
+}
+.p00 {
+    padding: 0;
+}
+.col-xs-2 {
+	float: left;
+    width: 20.66666667%;
+}
+.list-three .bgcolor {
+    width: 62px;
+    height: 62px;
+    background: linear-gradient(180deg, #5ac2de, #dd005b);
+    display: block;
+    border-radius: 50%;
+    padding: 2px;
+    margin-left: -4px;
+}
+.bgcolor1 {
+    border: 2px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.list-three .home-icon-img {
+    border-radius: 50%;
+    /*border: 1px solid #efeeee;*/
+    width: 54px;
+    height: 54px;
+    padding: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #fff;
+}
+.col-xs-10 {
+    width: 71.33333333%;
+    float: right;
+}
+.f14px {
+    font-size: 14px !important;
+}
+.f99 {
+    color: #999;
+}
+.f10px {
+    font-size: 10px !important;
+}
+page {
+	background: #f3f3f3;
 }

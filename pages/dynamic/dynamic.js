@@ -59,9 +59,11 @@ Page({
       url: '../note/note?id=' + id
     })
   },
-  xhnote: function() {
+  xhnote: function(e) {
+    var id = e.currentTarget.dataset.associationid;
+    console.log(id)
     wx.navigateTo({
-      url: '../xh-note/xh-note'
+      url: '../xh-note/xh-note?id=' + id
     })
   },
   

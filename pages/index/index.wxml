@@ -1,31 +1,36 @@
 <view class="slide">
-  <swiper indicator-dots="true" autoplay="true" interval="4000" duration="0" circular="true">
-    <block wx:for="{{imgUrls}}" wx:key="property">
-      <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150" mode="aspectFill" />
-      </swiper-item>
-    </block>
-  </swiper>
+  <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorcolor}}" 
+  indicator-active-color="{{indicatoractivecolor}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+<view class="clearfix">
+  <view class="container" wx:for="{{associationList}}" data-id="{{item.id}}" bindtap="associationdetail">
+        <view class="list-three clearfix">
+          <view class="col-xs-2 p00">
+            <span class="bgcolor">
+                <span class="bgcolor1">
+                  <image mode="scaleToFill" class="home-icon-img" src="{{item.associationImg}}"></image>
+                </span>
+            </span>
+          </view>
+          <view class="col-xs-10">
+              <view class="f14px">{{item.associationName}}</view>
+              <view class="f10px f99">{{item.associationBrief}}</view>
+          </view>
+        </view>
+  </view>
+
 </view>
 
 
- <!-- <view class="news-item-container">
-  <block wx:for="{{list}}" wx:for-index="id">
-    <text wx:if="{{item.header}}" class="sub-title">{{item.header}}</text>
-    <navigator wx:else url="../detail/detail?id={{item.id}}">
-      <view class="news-item">
-        <view class="news-item-left">
-          <text class="news-item-title">{{item.title}}</text>
-        </view>
-        <view class="news-item-right">
-          <image src="{{item.images[0]}}" class="news-image" />
-        </view>
-      </view>
-    </navigator>
-  </block>
-</view>  -->
 
 
-<view class='addxie'>
+<view class='addxie' bindtap="addAssociation">
   + 添加协会
 </view>

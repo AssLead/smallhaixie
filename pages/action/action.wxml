@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="home-title clearfix" style="border: 0; margin-top: 60px; padding-bottom: 40px;">
+      <view class="home-headimg pull-right">
+          <image class="headimg" src="{{userInfo.avatarUrl}}" />
+      </view>
+      <view class="f18px" style="margin-top:8px;">一共参加100次活动</view>
+      <view class="f14px" style="color: #666">总时长为1000小时</view>
+    </view>
+     
+</view>
+
+<view class="hd-tab">
+    <view class="hdc-title clearfix">
+        <view class="col-xs-6  {{currentTab==0 ? 'bcf' : ''}}"  data-current="0" bindtap="swichNav" style="border-right: 1px solid #e0e0e0;">未参加</view>
+        <view class="col-xs-6 {{currentTab==2 ? 'bcf' : ''}}"  data-current="2" bindtap="swichNav">已完成</view>
+    </view>
+    <view class="hdc-block" wx:for="{{activelist}}" data-key='{{index}}' data-id='{{item.id}}'bindtap="actdetail">
+    	<image mode="scaleToFill" class="testimg" src="{{item.activitiImg}}"></image>
+        <view class="hd-num">已报名：{{item.joinNum}}人</view>
+        <view class="container pt0">
+          	<view class="hd-t">{{item.title}}</view>
+          	<view class="hd-small">限制人数{{item.limitNum}}人</view>
+          	<view class="hd-time">
+          		<view class="time-icon">
+    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+          		</view>
+	          	{{item.startDate}}
+	      	</view>
+          	<view class="hd-address">
+          		<view class="address-icon">
+    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+          		</view>
+	          	{{item.activitiArea}}
+	        </view>
+          	<view class="btn hd-btn">
+          		<view style="color: #fff">立即报名</view>
+          	</view>
+        </view>
+    </view>
+
+    
+</view>

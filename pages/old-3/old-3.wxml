@@ -3,13 +3,13 @@
     <view class="f15px mgtb10">还剩28分49秒，订单将被取消</view>
     <view class="f15px mgtb10">地址</view>
     <view class="col-xs-9 p0">
-        <view class="textp">马云的媳妇  13189767135</view>
-        <view class="textp">广东省深圳市福田区益田路3008号皇都广场AA座807</view>
+        <view class="textp">{{oldlist.receive}}  {{oldlist.phoneNum}}</view>
+        <view class="textp">{{oldlist.address}}</view>
    	</view>
-   	<navigator url="../address2/address2" hover-class="" class="">
+   	<view bindtap="changeAddress" class="" data-id="{{oldlist.id}}" data-orderNum="{{oldlist.orderNum}}">
    		<a href="" class="older-pirce-btn2  pull-right bcf bcfb">修改地址</a>
 		<!-- 修改地址 -->
-	</navigator>
+	</view>
 </view>
 
 <view class="older-sec sec10 clearfix" style="background: #fff">
@@ -22,16 +22,16 @@
             </view>
             <view class="col-xs-8 p00">
                 <view class="older-list-1">          
-                  	<view class="older-list-title">深圳体育中心比赛游泳活动深圳体育中心比赛游泳活动</view>
-                  	<view class="older-list-pirce "><text class="fred">￥ 35.00</text> * 1</view>
+                  	<view class="older-list-title">{{oldlist.name}}</view>
+                  	<view class="older-list-pirce "><text class="fred">￥ {{oldlist.mony}}</text> * 1</view>
                 </view>
             </view>
             
         </view>
         <view class="older-sec clearfix" style="background: #fff">
-		        <view class="older-line"><view class="pull-right">-￥20.00</view>积分抵扣</view>
+		        <view class="older-line"><view class="pull-right">-￥{{oldlist.integral}}</view>积分抵扣</view>
 		        <view class="older-line"><view class="pull-right">免运费</view>运费</view>
-		        <view class="older-line" style="border-bottom: 0"><view class="pull-right">￥10</view>总金额（CNY）
+		        <view class="older-line" style="border-bottom: 0"><view class="pull-right">￥{{oldlist.mony}}</view>总金额（CNY）
 		    </view>
 		</view>
     </view>

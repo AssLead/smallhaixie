@@ -29,6 +29,7 @@
     "pages/xh-dongtai/xh-dongtai",
     "pages/xh-sq/xh-sq",
     "pages/qiye/qiye",
+    "pages/add-xh/add-xh",
     "pages/logs/logs"
   ],
   "window": {

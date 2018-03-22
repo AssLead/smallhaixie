@@ -7,6 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    imgUrls:null,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
     markers: [{
       iconPath: "/images/location.png",
       id: 0,
@@ -62,6 +66,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.showLoading({})
     var that = this;
     // 页面初始化 options为页面跳转所带来的参数
     app.isLogin(function (userDetail) {
@@ -74,8 +80,8 @@ Page({
         id:options.id,
     })
 
-    // findDynamic
-    var requestUrl = "findDynamic";
+    // findActiviti
+    var requestUrl = "findActiviti";
 
     var jsonData = {
         id:that.data.id,
@@ -83,26 +89,42 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        /*wx.showLoading({
-          // title: '登录中...',
-        })
+        wx.showLoading({})
         if (res.code == 'success') {
-            var dynamicList = res.list;
-            console.log(dynamicList);
+            var activelist = res.list;
             
-            for(let i=0; i<dynamicList.length; i++) {
-                dynamicList[i].activitiBean.activitiImg = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].activitiBean.activitiImg.split(',')[0]
-                // console.log(util.formatTime(dynamicList[i]["createDate"],'Y/M/D h:m:s'));
-                console.log()
-                dynamicList[i].createDate = util.formatTime(dynamicList[i]["createDate"],'Y/M/D h:m:s')
+            for(let i=0; i<activelist.length; i++) {
+                activelist[i].activitiImg = activelist[i].activitiImg.split(',');
+                activelist[i].startDate = util.formatTime(activelist[i]["startDate"],'Y/M/D h:m:s')
+                activelist[i].endDate = util.formatTime(activelist[i]["endDate"],'Y/M/D h:m:s')
             }
             that.setData({  
-                dynamicList: dynamicList
-            })  
+                activelist: activelist[0],
+
+            }) 
+            console.log(activelist);
+            var imgUrls=activelist[0].activitiImg;
+            
+            for(let i=0; i<imgUrls.length; i++) {
+              imgUrls[i] = 'http://www.qplant.vip/VisonShop/imageaction?name='+ imgUrls[i];
+            }
+            that.setData({  
+                imgUrls:imgUrls
+            }) 
+            
+            
             wx.hideLoading();
         } else {
           wx.hideLoading();
-        }*/
+          that.setData({  
+            activelist: null
+          }) 
+          wx.showToast({
+              title: res.msg,
+              icon: 'none',
+              duration: 2000
+            }) 
+        }
       }
     )
   },

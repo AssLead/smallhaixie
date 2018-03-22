@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 12,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -133,10 +133,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 17,
 					"name": "note",
 					"pathName": "pages/note/note",
-					"query": ""
+					"query": "id=1"
 				},
 				{
 					"id": -1,
@@ -151,10 +151,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 20,
 					"name": "协会",
 					"pathName": "pages/xh-note/xh-note",
-					"query": ""
+					"query": "id=1"
 				},
 				{
 					"id": -1,
@@ -184,6 +184,12 @@
 					"id": -1,
 					"name": "企业",
 					"pathName": "pages/qiye/qiye",
+					"query": ""
+				},
+				{
+					"id": 26,
+					"name": "创建",
+					"pathName": "pages/add-xh/add-xh",
 					"query": ""
 				}
 			]

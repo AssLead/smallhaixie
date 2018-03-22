@@ -89,4 +89,13 @@ Page({
       })  
     }  
   },
+  /** 
+     * 滑动切换tab 
+     */  
+  bindChange: function( e ) {  
+  
+    var that = this;  
+    that.setData( { currentTab: e.detail.current });  
+  
+  },  
 })

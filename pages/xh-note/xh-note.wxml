@@ -6,22 +6,23 @@
     <view class="container clearfix">
         <view class="xhn-title">
         	<view class="pull-right xht-icon">
-        		<image mode="scaleToFill" class="" src="../../images/img-thumbnail.jpg" ></image>
+        		<image mode="scaleToFill" class="" src="{{associationList.associationImg}}" ></image>
         	</view>
-        	<span class="f18px">篮球协会</span>
+        	<span class="f18px">{{associationList.associationName}}</span>
       </view>
       <view class="f12px mgt30  p0" style="font-weight: normal">
-      	篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗篮球协会，成立于2016年06月07日，业务上接受主管单位罗···
+      	{{associationList.associationBrief}}
       </view>
       <view class="xh-position">
         <span class="pull-right">></span>
         <span class="xh-icon f12px">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon1.png" ></image>
-        	深圳
+            {{associationList.address}}
         </span>
         <span class="xh-icon f12px">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon2.png" ></image>
-	        888
+            {{associationList.memberNum}}
+	        
 	    </span>
       </view>
 

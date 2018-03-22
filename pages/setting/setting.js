@@ -8,8 +8,6 @@ Page({
    */
   data: {
     tag:[],
-    // userDetail: null,
-    tempFilePaths: '../../images/set_02.jpg',
     marriage: ['是', '否'],
     index: 0,
   },
@@ -34,19 +32,35 @@ Page({
       })
     });
 
-    var userDetail = wx.getStorageSync('userDetail');
-    if(userDetail.marriage == "true") {
-      that.setData({
-        index: 0
-      })
-    } else {
-      that.setData({
-        index: 1
-      })
-    }
-    that.setData({
-      userDetail: userDetail
+    var user_key = wx.getStorageSync('user_key');
+    // wx.setStorageSync('user_key', res.data.list[0].openid);
+    wx.request({
+        url: 'http://www.qplant.vip/VisonShop/getUserInfo',
+        data: {
+          openid: user_key,
+        },
+        method: 'GET',
+        header: { 'content-type': 'application/json'},
+        success: function(res){
+          console.log(res);
+          wx.setStorageSync('userDetail', res.data.list[0]);
+          var userDetail = wx.getStorageSync('userDetail');
+          if(userDetail.marriage == "true") {
+            that.setData({
+              index: 0
+            })
+          } else {
+            that.setData({
+              index: 1
+            })
+          }
+          that.setData({
+            userDetail: userDetail
+          })
+          wx.hideLoading();
+        }
     })
+    
   },
 
   /**
@@ -68,7 +82,7 @@ Page({
           that.setData({
             tempFilePaths:tempFilePaths
           })
-          wx.uploadFile({
+          /*wx.uploadFile({
               url: 'http://www.qplant.vip/VisonShop/updataUserinfo', //仅为示例，非真实的接口地址
               filePath: tempFilePaths[0],
               name: 'file',
@@ -83,7 +97,7 @@ Page({
                 // var data = res.data
                 //do something
               }
-          })
+          })*/
 
         }
       })
@@ -111,35 +125,65 @@ Page({
     } else {
       value.marriage = "false"
     }
+    console.log(that.data.tempFilePaths);
+    if (that.data.tempFilePaths == undefined) {
+      
+      wx.showToast({
+        title: '请上传图片',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    }
     console.log('form发生了submit事件，携带数据为：', value);
 
-    // updataUserinfo
+    /*// updataUserinfo
     var requestUrl = "updataUserinfo";
 
     var jsonData = value;
     console.log(jsonData);
 
-    /*request.httpsPostRequest(requestUrl,jsonData,function(res){
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
         wx.showLoading({})
         if (res.code == 'success') {
             wx.hideLoading();
-            
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
+            })
         } else {
           wx.hideLoading();
         }
       }
     )*/
-    /*wx.uploadFile({
+    wx.uploadFile({
       url: 'http://www.qplant.vip/VisonShop/updataUserinfo', //仅为示例，非真实的接口地址
-      filePath: that.data.tempFilePaths,
+      filePath: that.data.tempFilePaths[0],
       name: 'file',
       formData:userId,
       success: function(res){
         console.log(res);
-        // var data = res.data
-        //do something
+
+        console.log(JSON.parse(res.data).code);
+        
+        if (JSON.parse(res.data).code == 'success') {
+            wx.hideLoading();
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
+            })
+        } else {
+          wx.hideLoading();
+          wx.showToast({
+            title: JSON.parse(res.data).msg,
+              icon: 'none',
+              duration: 2000
+          })
+        }
       }
-    })*/
+    })
   },
 })

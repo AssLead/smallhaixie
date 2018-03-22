@@ -1,4 +1,5 @@
-// pages/xh-note/xh-note.js
+var app = getApp();
+var request = require("../../utils/request.js");
 Page({
 
   /**
@@ -16,7 +17,49 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+        wx.showLoading({})
+
+    var that = this;
+
+    app.isLogin(function (userDetail) {
+      // 更新数据
+      that.setData({
+        userDetail: userDetail
+      })
+    });
+    
+    console.log(options)
+    that.setData({
+        id:options.id,
+    })
+
+    // findAssociation
+    var requestUrl = "findAssociation";
+    var associationId = that.data.id;
+
+    var jsonData = {
+        associationId:associationId,
+    };
+
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        wx.showLoading({})
+        if (res.code == 'success') {
+            var associationList = res.list[0];
+            console.log(associationList);
+            // for(let i=0; i<associationList.length; i++) {
+                associationList.associationImg = 'http://www.qplant.vip/VisonShop/imageaction?name='+ associationList.associationImg  + '&type=1';
+              //imgUrls[i] = 'http://www.qplant.vip/VisonShop/imageaction?name='+ imgUrls[i] + '&type=5';
+            // }
+            that.setData({  
+                associationList: associationList
+            })  
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
+        }
+      }
+    )
   },
 
   /**

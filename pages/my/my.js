@@ -32,7 +32,7 @@ Page({
           },
           {
             name: '金融投资',
-            page: '../goods/goods',
+            page: '',
             arrow: '../../images/icon_my_invest.png'
           },
           {

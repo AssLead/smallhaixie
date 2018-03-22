@@ -1,0 +1,44 @@
+<view class="container">
+      <view class="address">
+          <view class="f18px">创建协会</view>
+      </view>
+    
+    <view class=" edit-note">
+		<form action="" bindsubmit="formSubmit">
+		    <view class="form-group">
+			    <view class="section__title">协会名称</view>
+			    <input placeholder="" class="edit-input" name="associationName" value="房东" />
+			</view>
+			<view class="form-group">
+			    <view class="section__title">协会简介</view>
+			    <input placeholder="" class="edit-input" name="associationBrief" value="房东" />
+			</view>
+			<view class="form-group">
+			    <view class="section__title">协会手机号</view>
+			    <input type="number" maxlength="11" name="assPhone" value="15212345678" class="edit-input" />
+			    <!-- <input placeholder="" class="edit-input" name="assPhone" /> -->
+			</view>
+			<view class="form-group">
+			    <view class="section__title">协会地址</view>
+			    <input placeholder="" class="edit-input" name="address" value="房东" />
+			</view>
+			<view class="form-group ">
+			    <view class="section__title ">协会图标</view>
+	                
+			    <view class="add-xh-img" bindtap="chooseimg">
+			    	<image mode="scaleToFill" class="{{hide}}" style="width: 14px;height:14px;margin-top: -8px;" src="../../images/plus.png"></image> 
+			    	<image mode="scaleToFill" class="" style="position:absolute;width: 88px;height:88px;left: 0;z-index: 10" src="{{tempFilePaths}}"></image>
+			    </view>
+			     
+			</view>
+			
+
+			<view class="fb-bg container navbar-fixed-bottom">
+				<button class="footer-btn btn" formType="submit"  plain="false" >创建协会</button>
+			</view>
+
+	   	</form>
+	</view>  
+    
+    
+</view>
