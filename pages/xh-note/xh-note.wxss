@@ -1,7 +1,9 @@
 image {
     width: 100%;
 }
-
+swiper {
+    height:225px;
+}
 image {
     vertical-align: middle;
 }

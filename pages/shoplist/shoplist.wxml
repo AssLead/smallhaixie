@@ -11,7 +11,7 @@
              <image mode="scaleToFill" class="shopimg" src="../../images/p/p1.png"></image>
           </view>
           <view class="f14px mgt5 shopname">{{item.name}}</view>
-          <view class="f12px"><text>￥{{item.mony}}元+{{item.integral}}积分</text> 购买 </view>
+          <view class="f12px"><text>￥{{item.money}}元+{{item.integral}}积分</text> 购买 </view>
         </view>
 
     </view>

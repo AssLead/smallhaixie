@@ -15,7 +15,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
+    
+    wx.showLoading({ title: '加载中...' })
     var that=this;
     
     that.setData({
@@ -32,7 +34,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var shopdetail = res.list[0];
             console.log(shopdetail);

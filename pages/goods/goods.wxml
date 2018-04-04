@@ -16,7 +16,7 @@
 </view>
 <view class="navbar-fixed-bottom">
 	<view class="fb-bg">
-	    <button class="footerbtn" size="default" plain="false" >{{shopdetail.mony}}元+{{shopdetail.integral}}积分兑换</button>
+	    <button class="footerbtn" size="default" plain="false" >{{shopdetail.money}}元+{{shopdetail.integral}}积分兑换</button>
 	</view>
 
 </view>

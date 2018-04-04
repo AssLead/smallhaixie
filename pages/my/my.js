@@ -60,27 +60,41 @@ Page({
         userInfo: userInfo
       })
     });
-    app.isLogin();
-    
-    /*wx.login({
-      success:function(res_login){
-        console.log(res_login.code)
-        if(res_login.code){
-          wx.request({
-              url: 'http://www.qplant.vip/VisonShop/wxcode',
-              data: {
-                code: res_login.code,
-              },
-              method: 'GET',
-              header: { 'content-type': 'application/json'},
-              success: function(res){
-                console.log(res.data.list[0].openid)
-                // wx.setStorageSync('user_key', res.data);
-              }
+    app.isLogin(function (userDetail) {
+      console.log(userDetail)
+      // 更新数据
+      that.setData({
+        userDetail: userDetail
+      })
+    });
+    var user_key = wx.getStorageSync('user_key');
+
+    wx.request({
+        url: 'http://www.qplant.vip/VisonShop/getUserInfo',
+        data: {
+          openid: user_key,
+        },
+        method: 'GET',
+        header: { 'content-type': 'application/json'},
+        success: function(res){
+          wx.hideLoading();
+          console.log(res);
+          wx.setStorageSync('userDetail', res.data.list[0]);
+          var userDetail = wx.getStorageSync('userDetail');
+          if (userDetail.portrait != undefined) {
+            that.setData({
+              portrait:'http://www.qplant.vip/VisonShop/imageaction?name='+ userDetail.portrait + '&type=2',
+            
+            })
+          }
+          that.setData({
+            userDetail: userDetail
           })
-          
+          wx.hideLoading();
         }
-      },
-    });*/
+    })
+    
+    
+    
   }
 })

@@ -15,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
     app.isLogin(function (userDetail) {
       // 更新数据
       that.setData({
@@ -37,7 +37,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var oldlist = res.list[0];
             console.log(oldlist);
@@ -74,7 +74,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             wx.showToast({
               title: '添加地址成功',

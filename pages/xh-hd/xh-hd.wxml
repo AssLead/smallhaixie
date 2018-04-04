@@ -21,51 +21,28 @@
 </view>
 
 <view class="hd-tab">
-    <view class="hdc-block">
-    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
-        <view class="hd-num">已报名：6人</view>
+    <view class="hdc-block" wx:for="{{activelist}}" data-key='{{index}}' data-id='{{item.id}}'>
+        <image mode="scaleToFill" class="testimg" src="{{item.activitiImg}}" data-id='{{item.id}}' bindtap="activeDetail"></image>
+        <view class="hd-num">已报名：{{item.joinNum}}人</view>
         <view class="container pt0">
-          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
-          	<view class="hd-small">限制人数8人</view>
-          	<view class="hd-time">
-          		<view class="time-icon">
-    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
-          		</view>
-	          	2017-12-17(星期五) 13:00
-	      	</view>
-          	<view class="hd-address">
-          		<view class="address-icon">
-    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
-          		</view>
-	          	深圳.深圳体育馆
-	        </view>
-          	<view class="btn hd-btn">
-          		<view style="color: #fff">立即报名</view>
-          	</view>
+            <view class="hd-t">{{item.title}}</view>
+            <view class="hd-small">限制人数{{item.limitNum}}人</view>
+            <view class="hd-time">
+              <view class="time-icon">
+            <image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
+              </view>
+              {{item.startDate}}~~{{item.endDate}}
+              
+          </view>
+            <view class="hd-address">
+              <view class="address-icon">
+            <image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
+              </view>
+              {{item.activitiArea}}
+          </view>
+            <view class="btn hd-btn"  bindtap="joinActiviti" data-id='{{item.id}}'>
+              <view style="color: #fff">立即报名</view>
+            </view>
         </view>
-    </view>
-
-    <view class="hdc-block">
-    	<image mode="scaleToFill" class="testimg" src="../../images/test.jpg"></image>
-        <view class="hd-num">已报名：6人</view>
-        <view class="container pt0">
-          	<view class="hd-t">深圳体育中心比赛游泳活动</view>
-          	<view class="hd-small">限制人数8人</view>
-          	<view class="hd-time">
-          		<view class="time-icon">
-    				<image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
-          		</view>
-	          	2017-12-17(星期五) 13:00
-	      	</view>
-          	<view class="hd-address">
-          		<view class="address-icon">
-    				<image mode="scaleToFill" class="addressimg" src="../../images/hd-icon/address.png"></image>
-          		</view>
-	          	深圳.深圳体育馆
-	        </view>
-          	<view class="btn hd-btn">
-          		<view style="color: #fff">立即报名</view>
-          	</view>
-        </view>
-    </view>    
+    </view> 
 </view>

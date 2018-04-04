@@ -46,7 +46,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             wx.hideLoading();
             wx.showModal({

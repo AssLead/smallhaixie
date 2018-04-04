@@ -51,6 +51,7 @@ Page({
       })
   },
   formSubmit: function(e) {
+    wx.showLoading({ title: '加载中...' })
     var that = this;
     var userId = wx.getStorageSync('userDetail').id;
     var value = e.detail.value;
@@ -69,7 +70,7 @@ Page({
     wx.uploadFile({
       url: 'http://www.qplant.vip/VisonShop/addAssociation', 
       filePath: that.data.tempFilePaths[0],
-      name: 'file',
+      name: 'associationLogo',
       formData:value,
       success: function(res){
         console.log(res);

@@ -9,8 +9,9 @@ image {
 .edit-nem-img span {
     position: absolute;
     display: block;
-    bottom: 15px;
+    bottom: -20px;
     right: 15px;
+    color:#000;
 }
 
 .edit-note {
@@ -47,7 +48,7 @@ image {
     color: #00a69a !important;
 }
 .mgtb25 {
-    margin: 25px 0;
+    margin: 25px 0 10px;
 }
 .f14px {
     font-size: 14px !important;
@@ -85,4 +86,21 @@ image {
 .picker {
     font-size: 14px;
     line-height:2em;
+}
+
+.free-radio {
+    display: block;
+    float: left;
+    width: 50px;
+    text-align: center;
+    line-height: 30px;
+    background: #fff;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #efefef;
+}
+
+.is_checked {
+    background:#00a69a;
+    color: #fff;
 }

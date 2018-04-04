@@ -24,6 +24,10 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"list": []
 		},
@@ -91,10 +95,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 10,
 					"name": "cart-end",
 					"pathName": "pages/cartend/cartend",
-					"query": ""
+					"query": "orderNum=01522766807486"
 				},
 				{
 					"id": -1,
@@ -136,7 +140,7 @@
 					"id": 17,
 					"name": "note",
 					"pathName": "pages/note/note",
-					"query": "id=1"
+					"query": "id=2"
 				},
 				{
 					"id": -1,
@@ -175,10 +179,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 24,
 					"name": "社区",
 					"pathName": "pages/xh-sq/xh-sq",
-					"query": ""
+					"query": "associationId=1"
 				},
 				{
 					"id": -1,
@@ -191,6 +195,18 @@
 					"name": "创建",
 					"pathName": "pages/add-xh/add-xh",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "导航动态",
+					"pathName": "pages/dynamic/dynamic",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "action",
+					"pathName": "pages/action/action",
+					"query": "id=2"
 				}
 			]
 		}

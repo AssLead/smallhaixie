@@ -21,6 +21,7 @@
     "pages/about/about",
     "pages/setting/setting",
     "pages/tag/tag",
+    "pages/tag2/tag2",    
     "pages/note/note",
     "pages/message/message",
     "pages/message-1/message-1",
@@ -36,7 +37,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#353535",
     "navigationBarTitleText": "微商会",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "color": "#484848",

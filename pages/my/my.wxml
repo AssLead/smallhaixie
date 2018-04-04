@@ -4,7 +4,7 @@
       <text class="name">{{userInfo.nickName}}</text>
       <text class='sign'>如果命运是一条暗涌的河流，谁是你灵魂的摆渡人</text>
     </view>
-    <image class="headimg" src="{{userInfo.avatarUrl}}" />
+    <image class="headimg" src="{{portrait}}" />
   </view>
 
   <block wx:for-items="{{menuList}}" wx:key="{{index}}">

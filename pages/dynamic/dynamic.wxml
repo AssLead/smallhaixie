@@ -2,20 +2,20 @@
      
     <view class="h-dt-block clearfix" wx:for="{{dynamicList}}" data-key='{{index}}' >
         <view class="follow-headimg pull-left" >
-            <image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg"></image>
+            <image mode="scaleToFill" class="" src="{{item.userbean.portrait}}"></image>
         </view>
         <view class="pull-left imgtitle">{{item.userbean.name}}
           <small>{{item.createDate}}</small>
         </view>
         <!-- <view class="clearfix"></view> -->
         <view class="h-dt-title">我发布了一个活动，快来参加吧！</view>
-        <view class="h-dt-note" bindtap="note" data-id="{{item.id}}" data-activitiId="{{item.activitiId}}">
+        <view class="h-dt-note" bindtap="note" data-id="{{item.id}}" data-activitiid="{{item.activitiBean.id}}">
             <view>
               <image mode="scaleToFill" class="" src="{{item.activitiBean.activitiImg}}" style="height: 166px"></image>
               <view class="h-dt-t">{{item.dynamicTitle}}</view>
             </view>
         </view> 
-        <view class="pull-right mgt1em" data-associationId="{{item.activitiBean.associationId}}" bindtap="xhnote"><view class="bcf fz14">{{item.activitiBean.associationId}}</view></view>
+        <!-- <view class="pull-right mgt1em" data-associationId="{{item.activitiBean.associationId}}" bindtap="xhnote"><view class="bcf fz14">{{item.activitiBean.associationId}}</view></view> -->
     </view>
 
 </view>

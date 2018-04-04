@@ -1,6 +1,6 @@
 var app = getApp();
 var request = require("../../utils/request.js");
-var util = require("../../utils/util.js");
+
 Page({
 
   /**
@@ -11,35 +11,8 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    markers: [{
-      iconPath: "/images/location.png",
-      id: 0,
-      latitude: 22.5595700000,
-      longitude: 114.0920100000,
-      width: 50,
-      height: 50,
-      callout: {
-        content:'深圳市体育中心123',
-        color:'#000',
-        fontSize: '14',
-        borderRadius: '10',
-        bgColor:'white',
-        padding: '10',
-        display: 'ALWAYS',
-        textAlign:'center'
-
-      },
-      label: {
-        content:'深圳市体育中心',
-        color:'#000',
-        fontSize: '14',
-        x: '22.5595700000',
-        y: '114.0920100000',
-        bgColor:'#white',
-        textAlign:'center'
-      }
-
-    }],
+    indicatorcolor:'#fff',
+    indicatoractivecolor:'#00a69a',
     controls: [{
       id: 1,
       iconPath: '/images/location.png',
@@ -50,7 +23,7 @@ Page({
         height: 50
       },
       clickable: true
-    }]
+    }],
   },
   regionchange(e) {
     console.log(e.type)
@@ -67,7 +40,7 @@ Page({
    */
   onLoad: function (options) {
 
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
     var that = this;
     // 页面初始化 options为页面跳转所带来的参数
     app.isLogin(function (userDetail) {
@@ -76,6 +49,7 @@ Page({
         userDetail: userDetail
       })
     });
+    console.log(options)
     that.setData({
         id:options.id,
     })
@@ -89,27 +63,110 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var activelist = res.list;
             
             for(let i=0; i<activelist.length; i++) {
-                activelist[i].activitiImg = activelist[i].activitiImg.split(',');
-                activelist[i].startDate = util.formatTime(activelist[i]["startDate"],'Y/M/D h:m:s')
-                activelist[i].endDate = util.formatTime(activelist[i]["endDate"],'Y/M/D h:m:s')
+                if (activelist[i].activitiImg != undefined) {
+                  activelist[i].activitiImg = activelist[i].activitiImg.split(',');
+                }
+                if (activelist[i].userBean != undefined) {
+                  activelist[i].userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+activelist[i].userBean.portrait + '&type=2';
+                }
+                
+            }
+            var markers = new Array();
+            if (activelist[0].longitude != undefined) {
+              var writer = {
+                iconPath: "/images/location.png",
+                id: 0,
+                latitude: activelist[0].longitude.split(",")[0],
+                longitude: activelist[0].longitude.split(",")[1],
+                width: 50,
+                height: 50,
+                callout: {
+                  content: activelist[0].address,
+                  color:'#000',
+                  fontSize: '14',
+                  borderRadius: '10',
+                  bgColor:'white',
+                  padding: '10',
+                  display: 'ALWAYS',
+                  textAlign:'center'
+                },
+                /*label: {
+                  content:activelist[0].address,
+                  color:'#000',
+                  fontSize: '14',
+                  x: activelist[0].longitude.split(",")[0],
+                  y: activelist[0].longitude.split(",")[1],
+                  bgColor:'#white',
+                  textAlign:'center'
+                }*/
+
+              }
+              that.setData({  
+                latitude: activelist[0].longitude.split(",")[0],
+                longitude: activelist[0].longitude.split(",")[1],
+              }) 
+            }
+            
+            markers.push(writer);
+            var slist = activelist[0].slist;
+            if (slist == "") {
+              that.setData({  
+                hide:'hide'
+              }) 
+            }
+            var mlist = activelist[0].mlist;
+            if (mlist == "") {
+              that.setData({  
+                mhide:'hide'
+              }) 
+            }
+            if (mlist.length < 3) {
+              that.setData({  
+                mmhide:'hide'
+              }) 
+            }
+            for(let i=0; i<mlist.length; i++) {
+              if (mlist[i].userBean != undefined) {
+                mlist[i].userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+ mlist[i].userBean.portrait + '&type=2';
+              }
+            }
+            for(let i=0; i<slist.length; i++) {
+              if (slist[i].activitiImg != undefined) {
+                slist[i].activitiImg = 'http://www.qplant.vip/VisonShop/imageaction?name='+ slist[i].activitiImg.split(',')[0];
+              }
             }
             that.setData({  
-                activelist: activelist[0],
-
+              activelist: activelist[0],
+              // latitude: activelist[0].longitude.split(",")[0],
+              // longitude: activelist[0].longitude.split(",")[1],
+              markers:markers
             }) 
             console.log(activelist);
             var imgUrls=activelist[0].activitiImg;
-            
-            for(let i=0; i<imgUrls.length; i++) {
-              imgUrls[i] = 'http://www.qplant.vip/VisonShop/imageaction?name='+ imgUrls[i];
+
+            if (imgUrls != undefined) {
+              for(let i=0; i<imgUrls.length; i++) {
+                imgUrls[i] = 'http://www.qplant.vip/VisonShop/imageaction?name='+ imgUrls[i];
+              }
             }
+            
+            var joinimgUrls=activelist[0].joinlist;
+            if (joinimgUrls != undefined) {
+              for(let i=0; i<joinimgUrls.length; i++) {
+                joinimgUrls[i].portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+ joinimgUrls[i].portrait+ '&type=2';
+              }
+            }
+            
+            
+
             that.setData({  
-                imgUrls:imgUrls
+              imgUrls:imgUrls,
+              joinimgUrls:joinimgUrls
             }) 
             
             
@@ -120,10 +177,10 @@ Page({
             activelist: null
           }) 
           wx.showToast({
-              title: res.msg,
-              icon: 'none',
-              duration: 2000
-            }) 
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          }) 
         }
       }
     )
@@ -139,5 +196,125 @@ Page({
     wx.navigateTo({
       url: '../message/message'
     })
+  },
+  actdetail: function(e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id)
+    wx.navigateTo({
+      url: '../note/note?id=' + id
+    })
+  },
+  content: function(e){
+
+    this.setData({
+      'content': e.detail.value
+    })
+  },
+  send: function(e) {
+    var that = this;
+    // console.log(e)
+    var id = e.currentTarget.dataset.id;
+    var userId = wx.getStorageSync('userDetail').id;
+    var content = this.data.content;
+    if (content == "") {
+      wx.showToast({
+        title: "不能为空",
+        icon: 'success',
+        duration: 2000
+      })
+      return
+    }
+    // addActivitiMessage
+    var requestUrl = "addActivitiMessage";
+
+    var jsonData = {
+      id:id,
+      userId:userId,
+      content:content
+    };
+    console.log(jsonData)
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        if (res.code == 'success') {
+            wx.showToast({
+              title: "留言成功",
+              icon: 'success',
+              duration: 2000
+            })
+            var pages = getCurrentPages()    //获取加载的页面
+
+            var currentPage = pages[pages.length-1]    //获取当前页面的对象
+
+            var url = currentPage.route
+            console.log(url)
+            wx.redirectTo({
+              url: '/' + url + '?id=' + that.data.id
+            })
+        } else {
+          wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
+          
+        }
+      }
+    )
+  },
+  joinActiviti: function(e) {
+    wx.showLoading({ title: '加载中...' })
+    // joinActiviti 
+    var requestUrl = "joinActiviti";
+    var userId = wx.getStorageSync('userDetail').id;
+    var openid = wx.getStorageSync('user_key');
+    var id = e.currentTarget.dataset.id;
+    var appid = 'wx91b1f0de12e0295e';
+    var that = this;
+
+    var jsonData = {
+        userId:userId,
+        id:id,
+        openid:openid,
+        appid:appid,
+    };
+    console.log(jsonData)
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        wx.showLoading({ title: '加载中...' })
+        if (res.code == 'success') {
+            res.list[0].prepay_id = "prepay_id=" + res.list[0].prepay_id;
+            console.log(res.list[0].prepay_id)
+            var orderNum = res.list[0].orderNum;
+            console.log(orderNum)
+            wx.showLoading({ title: '加载中...' })
+            wx.requestPayment({
+               'timeStamp': res.list[0].timeStamp,
+               'nonceStr': res.list[0].nonceStr,
+               'package':  res.list[0].prepay_id,
+               'signType': 'MD5',
+               'paySign': res.list[0].appSign,
+               'success':function(res){
+                  console.log(res);
+                  
+                  wx.navigateTo({
+                    url: '../cartend/cartend?orderNum=' + orderNum
+                  })
+               },
+               'fail':function(res){
+                console.log(res);
+               }
+            })
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      }
+    )
   }
 })

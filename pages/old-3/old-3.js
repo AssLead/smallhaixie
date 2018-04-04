@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
     app.isLogin(function (userDetail) {
       // 更新数据
       that.setData({
@@ -35,7 +35,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var oldlist = res.list[0];
             console.log(oldlist);

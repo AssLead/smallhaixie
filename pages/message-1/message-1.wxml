@@ -2,50 +2,20 @@
 
     <view class="message-title f18px">留言板</view>
     
-    <view class="message-block clearfix">
+    <view class="message-block clearfix" wx:for="{{messagelist}}" data-key='{{index}}' data-id='{{item.id}}'>
         <view class="follow-headimg pull-left">
-            <image mode="scaleToFill" class="" src="../../images/head2.png" ></image>
+            <image mode="scaleToFill" class="" src="{{item.userBean.portrait}}" ></image>
         </view>
-        <view class="pull-left imgtitle">方先生
-        	<small class="f10px">20171212 12:12</small>
+        <view class="pull-left imgtitle">{{item.userBean.name}}
+        	<small class="f10px">{{item.createDate}}</small>
         </view>
         <view class="message-note">
-        	<view class="message-note-b">我可以带我一个朋友来吗？他很厉害的。</view>
-          	<view class="admin_message">
-          		<strong>管理员回复：</strong>
-          		<span>可以的！我现在 就去组织！</span>
-          	</view>
+            <view class="message-note-b">{{item.content}}</view>
+            <view class="admin_message" wx:for="{{item.mlist}}" wx:for-item="mlist">
+                  <strong>{{mlist.userBean.id}}回复：</strong>
+                  <span>{{mlist.content}}</span>
+            </view>
         </view>
-    </view>
-
-    <view class="message-block clearfix">
-        <view class="follow-headimg pull-left">
-            <image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-        </view>
-        <view class="pull-left imgtitle">
-        	方先生
-        	<small class="f10px">两小时前</small>
-        </view>
-        <view class="message-note">
-        	<view class="message-note-b">我可能去不了了，我叫我朋友去吧。我可能去不了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。我可能去不了了，···</view>
-	        <view class="admin_message">
-	        	<strong>管理员回复：</strong>
-	        	<span>可以的！我现在 就去组织！</span>
-	        </view>
-		</view>
-    </view>
-
-    <view class="message-block clearfix">
-        <view class="follow-headimg pull-left">
-            <image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-        </view>
-        <view class="pull-left imgtitle">
-        	方先生
-        	<small class="f10px">两小时前</small>
-        </view>
-        <view class="message-note">
-        	<view class="message-note-b">我可能去不了了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。我可能去不了了，我叫我朋友去吧。</view>
-    	</view>
     </view>
 
 </view>

@@ -38,6 +38,8 @@ Page({
         });  
       }  
     }); 
+    wx.showLoading({ title: '加载中...' })
+    
     // getCoupon
     var requestUrl = "getCoupon";
     var userId = wx.getStorageSync('userDetail').id;

@@ -15,6 +15,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({ title: '加载中...' })
+    
     var that = this;  
     app.isLogin(function (userDetail) {
       // 更新数据
@@ -37,10 +39,16 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var followlist = res.list[0].fBean;
             console.log(followlist);
+            for(let i=0; i<followlist.length; i++) {
+              if (followlist[i].portrait != undefined) {
+                followlist[i].portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+followlist[i].portrait + "&type=2"
+                
+              }
+            }
              
             that.setData({  
                 followlist: followlist
@@ -75,9 +83,9 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
-            wx.showLoading({})
+            wx.showLoading({ title: '加载中...' })
             /*wx.showModal({
               title: '提示',
               content: '取消关注成功',

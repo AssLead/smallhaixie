@@ -6,9 +6,9 @@
 	        	<view class="bcf follow-btn" data-id="{{item.id}}" bindtap="deleteFollow">取消关注</view>
 	        </view>
 	        <view class="follow-headimg1 pull-left">
-	        	<image mode="scaleToFill" class="shopimg" src="../../images/head1.png"></image>
+	        	<image mode="scaleToFill" class="shopimg" src="{{item.portrait}}"></image>
 	        </view>
-	        <view class="follow-name">{{item.id}}</view>
+	        <view class="follow-name">{{item.name}}</view>
         </view>
 
     </view>

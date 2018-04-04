@@ -6,14 +6,11 @@ Page({
    */
   data: {
     dates:[
-        { "name": "游泳", "state": 1 },
-        { "name": "羽毛球", "state": 0 },
-        { "name": "足球", "state": 0 },
-        { "name": "跆拳道", "state": 0 },
-        { "name": "骑马", "state": 0 },
-        { "name": "拳击", "state": 0 },
-        { "name": "郊游", "state": 0 },
-        { "name": "射击", "state": 0 },
+        { "name": "唱歌", "state": 1 },
+        { "name": "听歌", "state": 0 },
+        { "name": "写歌", "state": 0 },
+        { "name": "古典", "state": 0 },
+        { "name": "流行", "state": 0 },
     ],  
   },
 
@@ -46,7 +43,7 @@ Page({
   saveTag: function() {
     var tag = JSON.stringify(this.data.dates)
     console.log(tag)
-    wx.setStorageSync('tag1', tag);
+    wx.setStorageSync('tag2', tag);
     wx.navigateTo({
       url: '../setting/setting'
     })

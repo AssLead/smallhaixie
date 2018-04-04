@@ -1,0 +1,20 @@
+<view class="container">
+    <view class="home-title">
+        <view class="f18px">
+        	<view >
+        		<text style="line-height: 28px;height: 28px">创建标签</text>	
+        		
+        		<image mode="scaleToFill" bindtap="chooseimg"  class="addimg" src="../../images/add.png" style=""></image>
+        	</view>
+        </view>
+    </view>
+
+    <view wx:for="{{dates}}" class="add-line" bindtap="clickChoose" data-key='{{index}}'>
+    	<span class="pull-right {{item.state==1?'add-right':''}}" ></span>{{item.name}}
+	</view>
+
+  	<view class="form-group" style="border-bottom: 0">
+    	<button class="btn-red pull-right" formType="submit" size="default" plain="false" bindtap="saveTag">保存</button>
+    </view>
+
+</view>

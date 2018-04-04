@@ -1,66 +1,78 @@
-// pages/xh-dongtai/xh-dongtai.js
+var app = getApp();
+var request = require("../../utils/request.js");
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    dynamicList: null,
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
-  },
+    wx.showLoading({ title: '加载中...' })
+    
+    // 页面初始化 options为页面跳转所带来的参数
+    app.isLogin(function (userDetail) {
+      // 更新数据
+      that.setData({
+        userDetail: userDetail
+      })
+    });
+    var that = this;
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+    that.setData({
+      id:options.associationId,
+    })
+
+    // getAssociationDynamic
+    var requestUrl = "getAssociationDynamic";
+    //var userId = that.data.id;
+
+    var jsonData = {
+      associationId:that.data.id
+    };
+
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        if (res.code == 'success') {
+            var dynamicList = res.list;
+            console.log(dynamicList);
+            
+            for(let i=0; i<dynamicList.length; i++) {
+                if (dynamicList[i].imgs != "") {
+                  dynamicList[i].imgs = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].imgs.split(',')[0]
+                }
+                dynamicList[i].userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].userBean.portrait + "&type=2"
+                
+            }
+            that.setData({  
+                dynamicList: dynamicList
+            })  
+            wx.hideLoading();
+        } else {
+          wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
+          
+        }
+      }
+    )
+  },
   onReady: function () {
-  
+    // 页面渲染完成
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  note: function(e) {
+    var id = e.currentTarget.dataset.activitiid;
+    console.log(id)
+    wx.navigateTo({
+      url: '../note/note?id=' + id
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  xhnote: function(e) {
+    var id = e.currentTarget.dataset.associationid;
+    console.log(id)
+    wx.navigateTo({
+      url: '../xh-note/xh-note?id=' + id
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
   
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

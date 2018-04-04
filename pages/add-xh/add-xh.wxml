@@ -7,20 +7,20 @@
 		<form action="" bindsubmit="formSubmit">
 		    <view class="form-group">
 			    <view class="section__title">协会名称</view>
-			    <input placeholder="" class="edit-input" name="associationName" value="房东" />
+			    <input placeholder="" class="edit-input" name="associationName" value="" />
 			</view>
 			<view class="form-group">
 			    <view class="section__title">协会简介</view>
-			    <input placeholder="" class="edit-input" name="associationBrief" value="房东" />
+			    <input placeholder="" class="edit-input" name="associationBrief" value="" />
 			</view>
 			<view class="form-group">
 			    <view class="section__title">协会手机号</view>
-			    <input type="number" maxlength="11" name="assPhone" value="15212345678" class="edit-input" />
+			    <input type="number" maxlength="11" name="assPhone" value="" class="edit-input" />
 			    <!-- <input placeholder="" class="edit-input" name="assPhone" /> -->
 			</view>
 			<view class="form-group">
 			    <view class="section__title">协会地址</view>
-			    <input placeholder="" class="edit-input" name="address" value="房东" />
+			    <input placeholder="" class="edit-input" name="address" value="" />
 			</view>
 			<view class="form-group ">
 			    <view class="section__title ">协会图标</view>

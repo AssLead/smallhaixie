@@ -23,7 +23,7 @@
             <view class="col-xs-8 p00">
                 <view class="older-list-1">          
                   	<view class="older-list-title">{{oldlist.name}}</view>
-                  	<view class="older-list-pirce "><text class="fred">￥ {{oldlist.mony}}</text> * 1</view>
+                  	<view class="older-list-pirce "><text class="fred">￥ {{oldlist.money}}</text> * 1</view>
                 </view>
             </view>
             
@@ -31,7 +31,7 @@
         <view class="older-sec clearfix" style="background: #fff">
 		        <view class="older-line"><view class="pull-right">-￥{{oldlist.integral}}</view>积分抵扣</view>
 		        <view class="older-line"><view class="pull-right">免运费</view>运费</view>
-		        <view class="older-line" style="border-bottom: 0"><view class="pull-right">￥{{oldlist.mony}}</view>总金额（CNY）
+		        <view class="older-line" style="border-bottom: 0"><view class="pull-right">￥{{oldlist.money}}</view>总金额（CNY）
 		    </view>
 		</view>
     </view>

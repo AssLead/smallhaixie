@@ -3,53 +3,23 @@
 
     <view class="xhdt-title f18px">动态</view>
     
-    <view class="xhdt-block">
+    <view class="xhdt-block" wx:for="{{dynamicList}}" data-key='{{index}}'>
         <view class="follow-headimg pull-left">
-    		<image mode="scaleToFill" class="" src="../../images/head2.png"></image>
+    		<image mode="scaleToFill" class="" src="{{item.userBean.portrait}}"></image>
 
         </view>
-        <view class="pull-left imgtitle">方先生发起了一个活动
-        	<small>2017.2.3 12:12</small>
+        <view class="pull-left imgtitle">{{item.userBean.name}}
+        	<small>{{item.createdate}}</small>
         </view>
         <view class="xhdt-note clearfix">
 	        <view>
-	    		<image mode="scaleToFill" class="lsqyimg" src="../../images/lsqyimg.jpg"></image>
-	            <view class="xhdt-t">深圳体育馆羽毛球比赛</view>
+	    		<image mode="scaleToFill" class="lsqyimg" src="{{item.activitiBean.activitiImg}}"></image>
+	            <view class="xhdt-t">{{item.content}}</view>
 	        </view>
         </view>
     </view>
 
-	<view class="xhdt-block">
-        <view class="follow-headimg pull-left">
-    		<image mode="scaleToFill" class="" src="../../images/head2.png"></image>
-
-        </view>
-        <view class="pull-left imgtitle">方先生发起了一个活动
-        	<small>2017.2.3 12:12</small>
-        </view>
-        <view class="xhdt-note clearfix">
-	        <view>
-	    		<image mode="scaleToFill" class="lsqyimg" src="../../images/lsqyimg.jpg"></image>
-	            <view class="xhdt-t">深圳体育馆羽毛球比赛</view>
-	        </view>
-        </view>
-    </view>
-
-    <view class="xhdt-block">
-        <view class="follow-headimg pull-left">
-    		<image mode="scaleToFill" class="" src="../../images/head2.png"></image>
-
-        </view>
-        <view class="pull-left imgtitle">方先生发起了一个活动
-        	<small>2017.2.3 12:12</small>
-        </view>
-        <view class="xhdt-note clearfix">
-	        <view>
-	    		<image mode="scaleToFill" class="lsqyimg" src="../../images/lsqyimg.jpg"></image>
-	            <view class="xhdt-t">深圳体育馆羽毛球比赛</view>
-	        </view>
-        </view>
-    </view>
+	
     
 
 </view>

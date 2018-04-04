@@ -3,40 +3,26 @@
 </view>
 
 <form action="" bindsubmit="formSubmit">
-
-	<view class="xq-block">
+	
+	<view class="xq-block" wx:for="{{communitylist}}" data-key='{{index}}' data-id='{{item.id}}'>
 		<view class="message-block clearfix">
 	        <view class="follow-headimg pull-left">
-	            <image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
+	            <image mode="scaleToFill" class="" src="{{item.userBean.portrait}}" ></image>
 	        </view>
 	        <view class="pull-left imgtitle">
-	        	一年好景君须记
-	        	<small>20171212 12:12</small>
+	        	{{item.userBean.name}}
+	        	<small>{{item.createdate}}</small>
 	        </view>
-	        <view class="message-note">祝贺罗湖区海归协会代表队在8月25日的深圳市业余羽毛球公开赛比赛中勇夺冠军！这是今年获得的第二项团体冠军。本次我们参赛的队员有：曾宇龙，方俊欣。</view>
-	        <view class="xq-img ">
+	        <view class="message-note">{{item.content}}</view>
+	        <view class="xq-img " wx:for="{{item.imgs}}" wx:for-item="imgs" wx:key="id">
 	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
+	            	<image mode="scaleToFill" class="" src="{{imgs}}" ></image>
 	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
+	            
 	        </view>
 
 	        <view class="pull-right plm">
-	            <a href="">
+	            <a href="" data-id="{{item.id}}" bindtap="showsend">
 	            	<span>
 	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/pl.png" ></image>
 	            	</span>
@@ -44,93 +30,35 @@
 	            		评论
 	            	</span>
 	            </a>
-	            <a href="">
+	            <a href="" bindtap="addPraise" data-id='{{item.id}}'>
 	            	<span>
 	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/ok.png" ></image>
 	            	</span>
 	            	<span>
-	            		100
+	            		{{item.goods}}
 	            	</span>
 	            </a>
 	        </view>
 	          
 	    </view>
-	    <view class="mess-list">
-	    	<a class="bcf" href="javascript:;">一年好景君须记：</a>
-	    	祝贺罗湖区海归协会代表队在8月25日的深圳市业余羽毛球公开赛比赛中勇夺冠军！这是今年获得的第二项团体冠军。本次我们参赛的队员有：曾宇龙，方俊欣。
+	    <view class="mess-list" wx:for="{{item.splist}}" wx:for-item="splist" wx:key="id">
+	    	<a class="bcf" href="javascript:;">{{splist.userBean.name}}:</a>
+	    	{{splist.content}}
 	    </view>
-	    <view class="section">
-			<input text placeholder="评论" class="form-control h4l4" value="" name="" />
+	    <view class="section clearfix {{_num == item.id ? '':'hide'}}" >
+			<input text placeholder="评论" class="form-control h4l4" value="" bindinput="content" name="{{item.id}}" data-id="{{item.id}}" />
+			<view class="send" data-id='{{item.id}}' bindtap="send">发送</view>
 		</view>
     
 	</view>
 
-	<view class="xq-block">
-		<view class="message-block clearfix">
-	        <view class="follow-headimg pull-left">
-	            <image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-	        </view>
-	        <view class="pull-left imgtitle">
-	        	一年好景君须记
-	        	<small>20171212 12:12</small>
-	        </view>
-	        <view class="message-note">祝贺罗湖区海归协会代表队在8月25日的深圳市业余羽毛球公开赛比赛中勇夺冠军！这是今年获得的第二项团体冠军。本次我们参赛的队员有：曾宇龙，方俊欣。</view>
-	        <view class="xq-img ">
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	            <view class="col-xs-4">
-	            	<image mode="scaleToFill" class="" src="../../images/home-banner_02.jpg" ></image>
-	            </view>
-	        </view>
-
-	        <view class="pull-right plm">
-	            <a href="">
-	            	<span>
-	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/pl.png" ></image>
-	            	</span>
-	            	<span>
-	            		评论
-	            	</span>
-	            </a>
-	            <a href="">
-	            	<span>
-	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/ok.png" ></image>
-	            	</span>
-	            	<span>
-	            		100
-	            	</span>
-	            </a>
-	        </view>
-	          
-	    </view>
-	    <view class="mess-list">
-	    	<a class="bcf" href="javascript:;">一年好景君须记：</a>
-	    	祝贺罗湖区海归协会代表队在8月25日的深圳市业余羽毛球公开赛比赛中勇夺冠军！这是今年获得的第二项团体冠军。本次我们参赛的队员有：曾宇龙，方俊欣。
-	    </view>
-	    <view class="section">
-			<input text placeholder="评论" class="form-control h4l4" value="" name="" />
-		</view>
-    
-	</view>
+	
 
 </form>
 
 
-<view class="navbar-fixed-bottom">
+<!-- <view class="navbar-fixed-bottom">
     <view class="fb-bg container">
         <view class="footer-btn btn ">发布</view>
     </view>
-</view>
+</view> -->

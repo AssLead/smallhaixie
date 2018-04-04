@@ -1,13 +1,11 @@
 <view class="xh-note xh-note1">
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorcolor}}" indicator-active-color="{{indicatoractivecolor}}">
     <block wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{item}}" class="slide-image" style="height: 225px"/>
       </swiper-item>
     </block>
   </swiper>
-  <!-- 'http://www.qplant.vip/VisonShop/imageaction?name='+ -->
-	<!-- <image mode="scaleToFill" class="" src="../../images/banner3_02.jpg" style="height: 225px"></image> -->
 </view>
 
 <view class="sec10b">
@@ -21,13 +19,13 @@
     <view class="container" style="position: relative;">
       <view class="xht-icon1">
         
-		    <image mode="scaleToFill" class="" src="../../images/man-icon_03.jpg" ></image>
+		    <image mode="scaleToFill" class="" src="{{activelist.userBean.portrait}}" ></image>
       </view>
       <view>
       <view class="f15px xh1-title2">{{activelist.activitiType}}活动</view>
-      <view class="f12px xh1-small2">组织人：<span class="bcf">{{activelist.founder}}</span></view>
+      <view class="f12px xh1-small2">组织人：<span class="bcf">{{activelist.userBean.name}}</span></view>
       </view>
-      <view class="f12px xh1-note2">毕业于哈佛大学，在校期间曾连续担任两届学生会会长，组织多次公益活动，奉献于社会。热爱公益事业，并将公益事业作为终其一生所努力奋斗的目标。</view>
+      <view class="f12px xh1-note2">{{activelist.userBean.introduce}}</view>
     </view>
 
 </view>
@@ -44,7 +42,8 @@
     <view class="container pt20">
       <view class="f15px xh1-title2">活动内包括的东西</view>
       <view class="f12px xh1-small2">
-        <view class="p">{{activelist.activitiInfo}}</view>
+
+        <view class="p" wx:for="{{activelist.built_in}}">{{item}}</view>
         <!-- <view class="p">专业游泳运动员的指导</view> -->
         <!-- <view class="p">中午午饭</view> -->
       </view>
@@ -55,8 +54,8 @@
     <view class="container pt20">
       <view class="f15px xh1-title2">活动地点</view>
       <view class="f12px xh1-small2">
-        <view class="p">深圳市福田区益田路</view>
-        <map id="map" longitude="114.0920100000" latitude="22.5595700000" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap"  bindregionchange="regionchange" show-location style="width: 100%; height: 158px;margin: 20px 0"></map>
+        <view class="p">{{activelist.address}}</view>
+        <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="18" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap"  bindregionchange="regionchange" show-location style="width: 100%; height: 158px;margin: 20px 0"></map>
       </view>
     </view>
 </view>
@@ -73,118 +72,67 @@
 
 <view class="sec10a" style="padding-bottom: 0">
     <view class="container pt20">
-	    <view class="f15px xh1-title2">活动成员</view>
-	    <view class="xhcy xh1-small2 clearfix" style="padding-bottom: 0; border-bottom: 0">
-	      	<view class="xhcya">
-	      		<image mode="scaleToFill" class="" src="../../images/head1.png" ></image>
-	      	</view>
-	      	<view class="xhcya">
-	      		<image mode="scaleToFill" class="" src="../../images/head2.png" ></image>
-	      	</view>
-	      	<view class="xhcya">
-	      		<image mode="scaleToFill" class="" src="../../images/head4.png" ></image>
-	      	</view>
-	      	<view class="xhcya">
-	      		<image mode="scaleToFill" class="" src="../../images/head3.png" ></image>
-	      	</view>
-	      	<view class="xhcya">
-	      		<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-	      	</view>
-	        <view class="bcf pull-right" style="line-height: 2.5em;">12名成员 ></view>
-	    </view>
-    	<view class="w100line"></view>
-    	<view class="section clearfix">
-			<form bindsubmit="bindFormSubmit">
-				<view class="col-xs-2 p0">
-		          	<image mode="scaleToFill" class="" src="../../images/head5.png" style="border-radius: 50%;width: 40px;height: 40px;"></image>
-		        </view>
-		        <view class="col-xs-10 p00">
-		        	<textarea placeholder="留下你的评论吧!" class="form-control" name="textarea"/>
-		        </view>
-			</form>
-		</view>
+  	    <view class="f15px xh1-title2">活动成员</view>
+  	    <view class="xhcy xh1-small2 clearfix" style="padding-bottom: 0; border-bottom: 0">
+  	      	<view class="xhcya" wx:for="{{joinimgUrls}}">
+  	      		<image mode="scaleToFill" class="" src="{{item.portrait}}" ></image>
+  	      	</view>
+  	        <view class="bcf pull-right" style="line-height: 2.5em;">{{activelist.joinNum}}名成员 ></view>
+  	    </view>
+      	<view class="w100line"></view>
+      	<view class="section clearfix">
+          <form bindsubmit="bindFormSubmit">
+            <view class="col-xs-2 p0">
+                <image mode="scaleToFill" class="" src="{{activelist.userBean.portrait}}" style="border-radius: 50%;width: 40px;height: 40px;"></image>
+            </view>
+            <view class="col-xs-10 p00">
+              <textarea placeholder="留下你的评论吧!" bindinput="content" class="form-control" name="textarea"/>
+            </view>
+            <view class="send" data-id='{{activelist.id}}' bindtap="send">发送</view>
 
-      	<view class="f15px xh1-title2">
-      		<view class="bcf pull-right" style="font-size:12px;font-weight: normal;" bindtap="moreMessage">更多留言>></view>
-      		活动留言
-      	</view>
-        <view class="message-block xh1-small2">
-              <view class="follow-headimg pull-left">
-              	<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-              </view>
-              <view class=" imgtitle ">方先生</view>
-              <view class=" f12px ">
-              	两小时前
-              </view>
-              <view class="message-note">我可以带我一个朋友来吗？他很厉害的。</view>
+          </form>
         </view>
-       	<view class="message-block xh1-small2">
-              <view class="follow-headimg pull-left">
-              	<image mode="scaleToFill" class="" src="../../images/head5.png" ></image>
-              </view>
-              <view class=" imgtitle ">方先生</view>
-              <view class=" f12px ">
-              	两小时前
-              </view>
-              <view class="message-note">我可以带我一个朋友来吗？他很厉害的。</view>
-        </view>
+
+    	<view class="f15px xh1-title2  {{mhide}}">
+    		<!-- <view class="bcf pull-right {{mmhide}}" style="font-size:12px;font-weight: normal;" bindtap="moreMessage">更多留言>></view> -->
+    		活动留言
+    	</view>
+      <view class="message-block xh1-small2" wx:for="{{activelist.mlist}}"  wx:if="{{index < 5}}">
+            <view class="follow-headimg pull-left">
+            	<image mode="scaleToFill" class="" src="{{item.userBean.portrait}}" ></image>
+            </view>
+            <view class=" imgtitle ">{{item.userBean.name}}</view>
+            <view class=" f12px ">{{item.createDate}}</view>
+            <view class="message-note">{{item.content}}</view>
+      </view>
     </view>
 </view>
 
-<view class="sec10a" style="margin-bottom: 70px">
+<view class="sec10a {{hide}}">
     <view class="container pt20">
       	<view class="f15px xh1-title2">类似活动</view>
         <view class="pro_list_a xh1-small2">
-			<view class="section section_gap">
-				  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
-				    <view class="scroll-view-item_H">
-				    	<view>
-				    		<image mode="scaleToFill" class="" src="../../images/pro-list.jpg" ></image>
-				    	</view>
-				    	<view class="f12px">深圳体育中心羽毛球比赛</view>
-				    	<view class="f14px"><strong>￥100</strong></view>
-						
-				    </view>
-				    
-				    <view class="scroll-view-item_H">
-				    	<view>
-				    		<image mode="scaleToFill" class="" src="../../images/pro-list.jpg" ></image>
-				    	</view>
-				    	<view class="f12px">深圳体育中心羽毛球比赛</view>
-				    	<view class="f14px"><strong>￥100</strong></view>
-						
-				    </view>
-				    <view class="scroll-view-item_H">
-				    	<view>
-				    		<image mode="scaleToFill" class="" src="../../images/pro-list.jpg" ></image>
-				    	</view>
-				    	<view class="f12px">深圳体育中心羽毛球比赛</view>
-				    	<view class="f14px"><strong>￥100</strong></view>
-						
-				    </view>
-				    <view class="scroll-view-item_H">
-				    	<view>
-				    		<image mode="scaleToFill" class="" src="../../images/pro-list.jpg" ></image>
-				    	</view>
-				    	<view class="f12px">深圳体育中心羽毛球比赛</view>
-				    	<view class="f14px"><strong>￥100</strong></view>
-						
-				    </view>
-				  </scroll-view>
-			</view>
+    			<view class="section section_gap">
+    				  <scroll-view class="scroll-view_H" scroll-x style="width: 100%" wx:for="{{activelist.slist}}" >
+    				    <view class="scroll-view-item_H" data-id="{{item.id}}" bindtap="actdetail">
+    				    	<view>
+    				    		<image mode="scaleToFill" class="" src="{{item.activitiImg}}" ></image>
+    				    	</view>
+    				    	<view class="f12px">{{item.title}}</view>
+    				    	<!-- <view class="f14px"><strong>￥100</strong></view> -->
+    						
+    				    </view>
+    				  </scroll-view>
+    			</view>
         </view>
-         
-
-       
     </view>
-
 </view>
 
 <view class="footer-btn2 container navbar-fixed-bottom clearfix">
-	<button class="btn-red pull-right" formType="submit" size="default" plain="false" >报名参加</button>
+	<button class="btn-red pull-right" formType="submit" size="default" plain="false" bindtap="joinActiviti" data-id='{{activelist.id}}'>报名参加</button  >
 	<!-- <view class="pull-right btn btn-default btn-red col-xs-4" style="margin: 0;">报名参加</view>       -->
 	<view class="pay-note">
-	    <view><strong>￥{{activelist.mony}}</strong> 每人</view>
+	    <view><strong>￥{{activelist.money}}</strong> 每人</view>
 	    <view class="f12px">获得{{activelist.integral}}积分</view>
 	</view>
 </view>

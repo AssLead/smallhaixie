@@ -1,6 +1,6 @@
 var app = getApp();
 var request = require("../../utils/request.js");
-var util = require("../../utils/util.js");
+
 
 Page({
 
@@ -9,12 +9,12 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    indicatorcolor:'#00a69a',
+    indicatorcolor:'#fff',
     indicatoractivecolor:'#00a69a',
   },
 
   onLoad: function (options) {
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
 
     var that = this;
     // 调用应用实例的方法获取全局数据
@@ -39,14 +39,16 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var activelist = res.list;
-            
+            var imgUrls = [];
             for(let i=0; i<activelist.length; i++) {
-                activelist[i].bannerName = activelist[i].bannerName.split(',');
+                imgUrls.push(activelist[i].bannerName)
+                // activelist[i].bannerName = activelist[i].bannerName.split(',');
             }
-            var imgUrls=activelist[0].bannerName;
+            console.log(imgUrls)
+            // var imgUrls=activelist[0].bannerName;
             
             for(let i=0; i<imgUrls.length; i++) {
               imgUrls[i] = 'http://www.qplant.vip/VisonShop/imageaction?name='+ imgUrls[i] + '&type=5';
@@ -68,6 +70,31 @@ Page({
       }
     )
 
+    that.getAssociationList();
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+  associationdetail: function(e) {
+    var id = e.currentTarget.dataset.id;
+    console.log(id)
+    wx.navigateTo({
+      url: '../xh-note/xh-note?id=' + id
+    })
+  },
+  addAssociation:function(e) {
+    wx.navigateTo({
+      url: '../add-xh/add-xh'
+    })
+  },
+  getAssociationList: function() {
+    var that = this;
+
+    wx.showLoading({ title: '加载中...' })
      // getAssociationList 
     var requestUrl2 = "getAssociationList";
 
@@ -75,7 +102,7 @@ Page({
 
     request.httpsPostRequest(requestUrl2,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        // wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var associationList  = res.list;
             for(let i=0; i<associationList.length; i++) {
@@ -97,24 +124,12 @@ Page({
         }
       }
     )
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
 
   },
-  associationdetail: function(e) {
-    var id = e.currentTarget.dataset.id;
-    console.log(id)
-    wx.navigateTo({
-      url: '../xh-note/xh-note?id=' + id
-    })
-  },
-  addAssociation:function(e) {
-    wx.navigateTo({
-      url: '../add-xh/add-xh'
-    })
-  },
+  onPullDownRefresh: function(){
+    wx.stopPullDownRefresh();
+    var that = this;
+    that.getAssociationList();
+  }
 })

@@ -7,18 +7,18 @@
 		    </view>
 		 </picker>
     </view>
-    <view class="lsyq-list">
+    <view class="lsyq-list" wx:for="{{directorlist}}" data-key='{{index}}' data-id='{{item.id}}'>
         <view class="lsqy-block">
           	<view class="lsqy-img">
-	            <image mode="scaleToFill" class="" src="../../images/lsqyimg.jpg" ></image>
+	            <image mode="scaleToFill" class="" src="{{item.logo}}" ></image>
          	</view>
           	<view class="lsqy-txt clearfix">
             	<view class="lsqy-txt-img">
-	            	<image mode="scaleToFill" class="" src="../../images/lsqy-icon.jpg" ></image>
+	            	<image mode="scaleToFill" class="" src="{{item.img}}" ></image>
             	</view>
             	<view class="lsqy-txt-1">
-                	<view class="f14px fwb">深圳市人人企业</view>
-                	<view class="f12px ">深圳市人人企业是某某某某，核心思···</view>
+                	<view class="f14px fwb">{{item.name}}</view>
+                	<view class="f12px ">{{item.introduce}}</view>
             	</view>
           	</view>
         </view>
@@ -26,40 +26,6 @@
     </view>
      
 
-    <view class="lsyq-list">
-        <view class="lsqy-block">
-          	<view class="lsqy-img">
-	            <image mode="scaleToFill" class="" src="../../images/lsqyimg.jpg" ></image>
-         	</view>
-          	<view class="lsqy-txt clearfix">
-            	<view class="lsqy-txt-img">
-	            	<image mode="scaleToFill" class="" src="../../images/lsqy-icon.jpg" ></image>
-            	</view>
-            	<view class="lsqy-txt-1">
-                	<view class="f14px fwb">深圳市人人企业</view>
-                	<view class="f12px ">深圳市人人企业是某某某某，核心思···</view>
-            	</view>
-          	</view>
-        </view>
-
-    </view>
-
-    <view class="lsyq-list">
-        <view class="lsqy-block">
-          	<view class="lsqy-img">
-	            <image mode="scaleToFill" class="" src="../../images/lsqyimg.jpg" ></image>
-         	</view>
-          	<view class="lsqy-txt clearfix">
-            	<view class="lsqy-txt-img">
-	            	<image mode="scaleToFill" class="" src="../../images/lsqy-icon.jpg" ></image>
-            	</view>
-            	<view class="lsqy-txt-1">
-                	<view class="f14px fwb">深圳市人人企业</view>
-                	<view class="f12px ">深圳市人人企业是某某某某，核心思···</view>
-            	</view>
-          	</view>
-        </view>
-
-    </view>  
+     
 
 </view>

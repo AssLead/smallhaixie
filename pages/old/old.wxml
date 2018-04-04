@@ -15,7 +15,7 @@
               <view class="col-xs-8 p00">
                 <view class="older-list-1">          
                   <view class="older-list-title">{{item.name}}</view>
-                  <view class="older-list-pirce fred">￥ {{item.mony}}</view>
+                  <view class="older-list-pirce fred">￥ {{item.money}}</view>
                 </view>
               </view>
             </view>

@@ -15,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({})
+    wx.showLoading({ title: '加载中...' })
     var that=this;
     // 0=电子产品 1=生活用平 2=零食 3=家具用平 4=优惠券
     if (options.type == 0) {
@@ -53,7 +53,7 @@ Page({
 
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
-        wx.showLoading({})
+        wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var shoplist = res.list;
             console.log(shoplist);
