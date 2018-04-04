@@ -12,7 +12,7 @@
         <view class="message-note">
             <view class="message-note-b">{{item.content}}</view>
             <view class="admin_message" wx:for="{{item.mlist}}" wx:for-item="mlist">
-                  <strong>{{mlist.userBean.id}}回复：</strong>
+                  <strong>{{mlist.userBean.name}}回复：</strong>
                   <span>{{mlist.content}}</span>
             </view>
         </view>
