@@ -39,6 +39,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({ title: '加载中...' })
 
     wx.showLoading({ title: '加载中...' })
     var that = this;
@@ -296,10 +297,12 @@ Page({
                'paySign': res.list[0].appSign,
                'success':function(res){
                   console.log(res);
-                  
-                  wx.navigateTo({
-                    url: '../cartend/cartend?orderNum=' + orderNum
-                  })
+                  wx.showLoading({ title: '加载中...' })
+                  setTimeout(function () {  
+                    wx.navigateTo({
+                      url: '../cartend/cartend?orderNum=' + orderNum
+                    })
+                  }, 2000)
                },
                'fail':function(res){
                 console.log(res);

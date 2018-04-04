@@ -199,10 +199,13 @@ Page({
                'paySign': res.list[0].appSign,
                'success':function(res){
                   console.log(res);
+                  wx.showLoading({ title: '加载中...' })
+                  setTimeout(function () {  
+                    wx.navigateTo({
+                      url: '../cartend/cartend?orderNum=' + orderNum
+                    })
+                  }, 2000)
                   
-                  wx.navigateTo({
-                    url: '../cartend/cartend?orderNum=' + orderNum
-                  })
                },
                'fail':function(res){
                 console.log(res);

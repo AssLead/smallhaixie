@@ -129,8 +129,11 @@ Page({
 
   },
   onPullDownRefresh: function(){
-    wx.stopPullDownRefresh();
     var that = this;
     that.getAssociationList();
+    
+    setTimeout(function () {  
+      wx.stopPullDownRefresh();
+    }, 100)
   }
 })
