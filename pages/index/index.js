@@ -97,9 +97,10 @@ Page({
     wx.showLoading({ title: '加载中...' })
      // getAssociationList 
     var requestUrl2 = "getAssociationList";
+    var userId = wx.getStorageSync('userDetail').id;
 
-    var jsonData = {};
-
+    var jsonData = {userId:userId};
+    console.log(jsonData)
     request.httpsPostRequest(requestUrl2,jsonData,function(res){
         console.log(res);
         // wx.showLoading({ title: '加载中...' })

@@ -8,7 +8,7 @@ image.slide-image {
 }
 
 .addxie {
-  margin: 13px 26px;
+  margin: 13px 26px 30px;
   text-align: center;
   font-size: 15px;
 }
