@@ -70,3 +70,10 @@ image.slide-image {
 page {
 	background: #f3f3f3;
 }
+.content {
+    height: 40px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}

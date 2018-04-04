@@ -13,7 +13,7 @@
         </view>
         <view class="xhdt-note clearfix">
 	        <view>
-	    		<image mode="scaleToFill" class="lsqyimg" src="{{item.activitiBean.activitiImg}}"></image>
+	    		<image mode="scaleToFill" class="lsqyimg" src="{{item.imgs}}"></image>
 	            <view class="xhdt-t">{{item.content}}</view>
 	        </view>
         </view>

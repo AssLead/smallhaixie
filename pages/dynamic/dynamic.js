@@ -22,7 +22,7 @@ Page({
     var that = this;
 
     var jsonData = {userId:userId};
-
+    console.log(jsonData)
     request.httpsPostRequest(requestUrl,jsonData,function(res){
         console.log(res);
         if (res.code == 'success') {

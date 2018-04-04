@@ -36,7 +36,12 @@ Page({
             
             for(let i=0; i<dynamicList.length; i++) {
                 if (dynamicList[i].imgs != "") {
-                  dynamicList[i].imgs = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].imgs.split(',')[0]
+                  if (dynamicList[i].imgs.length != 1) {
+                    dynamicList[i].imgs = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].imgs.split(',')[0] + "&type=3"
+                  } else {
+                    dynamicList[i].imgs = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].imgs + "&type=3"
+
+                  }
                 }
                 dynamicList[i].userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+dynamicList[i].userBean.portrait + "&type=2"
                 

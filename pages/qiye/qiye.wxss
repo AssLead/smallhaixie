@@ -38,3 +38,10 @@
     padding: 0.5em;
     color: #484848;
 }
+.qiyein {
+    width: 250px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}

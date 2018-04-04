@@ -10,15 +10,15 @@
     <view class="lsyq-list" wx:for="{{directorlist}}" data-key='{{index}}' data-id='{{item.id}}'>
         <view class="lsqy-block">
           	<view class="lsqy-img">
-	            <image mode="scaleToFill" class="" src="{{item.logo}}" ></image>
+	            <image mode="scaleToFill" class="" src="{{item.img}}" ></image>
          	</view>
           	<view class="lsqy-txt clearfix">
             	<view class="lsqy-txt-img">
-	            	<image mode="scaleToFill" class="" src="{{item.img}}" ></image>
+	            	<image mode="scaleToFill" class="" src="{{item.logo}}" ></image>
             	</view>
             	<view class="lsqy-txt-1">
                 	<view class="f14px fwb">{{item.name}}</view>
-                	<view class="f12px ">{{item.introduce}}</view>
+                	<view class="f12px qiyein" style="">{{item.introduce}}</view>
             	</view>
           	</view>
         </view>

@@ -30,6 +30,7 @@ Page({
       that.setData({
         userDetail: userDetail
       })
+      that.getAssociationList();
     });
 
     // banner 
@@ -103,7 +104,6 @@ Page({
     console.log(jsonData)
     request.httpsPostRequest(requestUrl2,jsonData,function(res){
         console.log(res);
-        // wx.showLoading({ title: '加载中...' })
         if (res.code == 'success') {
             var associationList  = res.list;
             for(let i=0; i<associationList.length; i++) {

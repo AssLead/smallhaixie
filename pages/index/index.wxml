@@ -21,7 +21,7 @@
           </view>
           <view class="col-xs-10">
               <view class="f14px">{{item.associationName}}</view>
-              <view class="f10px f99">{{item.associationBrief}}</view>
+              <view class="f10px f99 content">{{item.associationBrief}}</view>
           </view>
         </view>
   </view>
