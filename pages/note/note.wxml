@@ -70,14 +70,14 @@
     </view>
 </view>
 
-<view class="sec10a" style="padding-bottom: 0">
+<view class="sec10a" style="padding-bottom: 10px">
     <view class="container pt20">
   	    <view class="f15px xh1-title2">活动成员</view>
   	    <view class="xhcy xh1-small2 clearfix" style="padding-bottom: 0; border-bottom: 0">
   	      	<view class="xhcya" wx:for="{{joinimgUrls}}">
   	      		<image mode="scaleToFill" class="" src="{{item.portrait}}" ></image>
   	      	</view>
-  	        <view class="bcf pull-right" style="line-height: 2.5em;">{{activelist.joinNum}}名成员 ></view>
+  	        <view class="bcf pull-right" style="line-height: 2.5em;" bindtap="morejoin">{{activelist.joinNum}}名成员 ></view>
   	    </view>
       	<view class="w100line"></view>
       	<view class="section clearfix">
@@ -94,10 +94,10 @@
         </view>
 
     	<view class="f15px xh1-title2  {{mhide}}">
-    		<!-- <view class="bcf pull-right {{mmhide}}" style="font-size:12px;font-weight: normal;" bindtap="moreMessage">更多留言>></view> -->
+    		<view class="bcf pull-right" style="font-size:12px;font-weight: normal;" bindtap="moreMessage">更多留言>></view>
     		活动留言
     	</view>
-      <view class="message-block xh1-small2" wx:for="{{activelist.mlist}}"  wx:if="{{index < 5}}">
+      <view class="message-block xh1-small2" wx:for="{{activelist.mlist}}"  wx:if="{{index < 3}}">
             <view class="follow-headimg pull-left">
             	<image mode="scaleToFill" class="" src="{{item.userBean.portrait}}" ></image>
             </view>
@@ -128,7 +128,7 @@
     </view>
 </view>
 
-<view class="footer-btn2 container navbar-fixed-bottom clearfix">
+<view class="footer-btn2 container navbar-fixed-bottom clearfix" wx:if="{{activitiState == true }}">
 	<button class="btn-red pull-right" formType="submit" size="default" plain="false" bindtap="joinActiviti" data-id='{{activelist.id}}'>报名参加</button  >
 	<!-- <view class="pull-right btn btn-default btn-red col-xs-4" style="margin: 0;">报名参加</view>       -->
 	<view class="pay-note">

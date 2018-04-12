@@ -83,6 +83,7 @@ Page({
     })
   },
   addPraise: function (e) {
+    var that =this;
     // console.log(e)
     var communityId = e.currentTarget.dataset.id;
     // addPraise
@@ -99,6 +100,15 @@ Page({
               title: "点赞成功",
               icon: 'success',
               duration: 2000
+            })
+            var pages = getCurrentPages()    //获取加载的页面
+
+            var currentPage = pages[pages.length-1]    //获取当前页面的对象
+
+            var url = currentPage.route
+
+            wx.redirectTo({
+              url: '/' + url + '?associationId=' + that.data.id
             })
         } else {
           wx.hideLoading();

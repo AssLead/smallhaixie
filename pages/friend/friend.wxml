@@ -1,0 +1,61 @@
+<view class="sec10b">
+    <view class="container">
+        <view class="home-title" style="border: 0">
+          <view class="home-headimg pull-right">
+          	<image class="headimg" src="{{portrait}}" />
+          </view>
+          <view class="f18px">{{userDetail.name}}</view>
+          <view class="f12px" style="width: 70%">如果命运是一条暗涌的河流，谁是你灵魂的摆渡人</view>
+        </view>
+
+    </view>
+
+</view>
+
+<view class="sec10a">
+    <view class="container">
+        <view class="fd-note clearfix">
+          	<view class="f14px fwb">他的信息</view>
+          	<view class="row clearfix">
+	            <view class="col-xs-4">性别</view>
+	            <view class="col-xs-8">{{userDetail.sex}}</view>
+	         </view>
+	         <view class="row clearfix">
+	            <view class="col-xs-4">手机</view>
+	            <view class="col-xs-8">{{userDetail.phone}}</view>
+	         </view>
+          	<view class="row clearfix">
+            	<view class="col-xs-4">婚否</view>
+            	<view class="col-xs-8">{{userDetail.marriage == true ? '是' : '否'}}</view>
+          	</view>
+          	<view class="row clearfix">
+            	<view class="col-xs-4">从事行业</view>
+            	<view class="col-xs-8">{{userDetail.industry}}</view>
+          	</view>
+        </view>
+    </view>
+</view>
+
+<view class="sec10a">
+     <view class="container">
+        <view class="fd-note">
+          	<view class="f14px fwb">兴趣爱好</view>
+	        <view class="row clearfix ">
+	          	<view class="col-xs-4">体育</view>
+	          	<view class="col-xs-8">
+	          		<span wx:for="{{userDetail.hobby[0]}}">{{item}}</span>
+	          	</view>
+	        </view>
+	        <view class="row clearfix">
+	          	<view class="col-xs-4">音乐</view>
+	          	<view class="col-xs-8">
+					<span wx:for="{{userDetail.hobby[1]}}">{{item}}</span>
+	          	</view>
+	        </view>
+        </view>
+    </view>
+</view>
+
+<view class="fb-bg container navbar-fixed-bottom">
+	<view class="footer-btn btn " bindtap="addFollow">{{followtext}}</view>
+</view>

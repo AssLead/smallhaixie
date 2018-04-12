@@ -31,6 +31,13 @@
     "pages/xh-sq/xh-sq",
     "pages/qiye/qiye",
     "pages/add-xh/add-xh",
+    "pages/search/search",
+    "pages/associationuser/associationuser",
+    "pages/joinuser/joinuser",
+    "pages/friend/friend",
+    "pages/addmessage/addmessage",
+    "pages/myqy/myqy",
+    "pages/xhxq/xhxq",
     "pages/logs/logs"
   ],
   "window": {

@@ -24,7 +24,7 @@
       	{{associationList.associationBrief}}
       </view>
       <view class="xh-position">
-        <span class="pull-right">></span>
+        <span class="pull-right bcf" style="font-size: 12px;margin-top:5px;" bindtap="more">更多></span>
         <span class="xh-icon f12px">
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon1.png" ></image>
             {{associationList.address}}
@@ -33,7 +33,7 @@
         	<image mode="scaleToFill" class="" src="../../images/xh-icon/icon2.png" ></image>
             {{associationList.memberNum}}
 	        
-	    </span>
+	     </span>
       </view>
 
       <view class="xh-icons clearfix">
@@ -97,7 +97,7 @@
               <view class="time-icon">
             <image mode="scaleToFill" class="timeimg" src="../../images/hd-icon/time.png"></image>
               </view>
-              {{item.startDate}}~~{{item.endDate}}
+              {{item.startDate}}
           </view>
             <view class="hd-address">
               <view class="address-icon">

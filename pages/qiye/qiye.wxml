@@ -6,7 +6,9 @@
 		      理事企业:{{array[index]}}
 		    </view>
 		 </picker>
+     <view class="myqy" bindtap="myqy">我的企业</view>
     </view>
+
     <view class="lsyq-list" wx:for="{{directorlist}}" data-key='{{index}}' data-id='{{item.id}}'>
         <view class="lsqy-block">
           	<view class="lsqy-img">

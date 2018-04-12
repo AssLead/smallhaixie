@@ -149,3 +149,9 @@ page {
     border-radius: 4px;
     line-height: 42px !important;
 }
+.rightview {
+    width: 100%;
+}
+.mr {
+    margin-left: 5px;
+}

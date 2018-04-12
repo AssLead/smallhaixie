@@ -57,6 +57,11 @@ Page({
             wx.hideLoading();
         } else {
           wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
         }
       }
     )
@@ -105,8 +110,20 @@ Page({
             // wx.hideLoading();
         } else {
           wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
         }
       }
     )
-  }
+  },
+  friend: function(e) {
+    var followId = e.currentTarget.dataset.id;
+    console.log(followId)
+    wx.navigateTo({
+      url: '../friend/friend?id=' + followId
+    })
+  },
 })

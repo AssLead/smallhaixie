@@ -43,6 +43,11 @@ Page({
             wx.hideLoading();
         } else {
           wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
         }
       }
     )

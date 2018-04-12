@@ -61,6 +61,11 @@ Page({
             wx.hideLoading();
         } else {
           wx.hideLoading();
+          wx.showToast({
+            title: res.msg,
+            icon: 'none',
+            duration: 2000
+          })
         }
       }
     )
@@ -179,6 +184,12 @@ Page({
       url: '../shop/shop'
     })
   },
+  more: function() {
+    var associationId = this.data.id;
+    wx.navigateTo({
+      url: '../associationuser/associationuser?associationId=' + associationId
+    })
+  },
   activeDetail: function(e) {
     console.log(e)
     var id = e.currentTarget.dataset.id;
@@ -243,5 +254,6 @@ Page({
         }
       }
     )
-  }
+  },
+
 })

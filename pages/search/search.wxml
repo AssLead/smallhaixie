@@ -1,0 +1,38 @@
+<view class="search col-xs-12 text-center clearfix">
+  	<form action="" class="clearfix">
+    	<view class="col-xs-10 p0">
+    		<input type="text" class="search-input" placeholder="搜索您感兴趣的协会" value="{{wxSearchDatavalue}}" bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur"  />
+    	</view>
+    	
+    	<view class="btn btn-default col-xs-2">取消</view>
+  	</form>
+</view>
+
+<view class="container pora">
+	<view class="searchcon {{mhide}}">
+		 <view class="searchconde" wx:for="{{associationNameList}}" data-id="{{item}}" bindtap="selectThis">
+		 	{{item}}
+		 </view>
+	</view>
+  	<view class="hot-t f12px">热门搜索</view>
+	<view class="hot-list clearfix">
+	    <view>
+	      	<view class="hot-listli"><view class="hot-listlia" data-text="罗湖区海归协会" bindtap="hotsearch">罗湖区海归协会</view></view>
+	      	<view class="hot-listli"><view class="hot-listlia" data-text="深圳市罗湖区丽晶幼儿园" bindtap="hotsearch">深圳市罗湖区丽晶幼儿园</view></view>
+	    </view>
+	</view>
+  	<view class="history mgt1em clearfix">
+	    <view>
+	      	<view class="historyli" wx:for="{{historyList}}" wx:if="{{index < 10}}" >
+	      		<view class="historylia" >
+	      			<span class="pull-right" bindtap="delect" data-text="{{item}}">x</span>
+	      			<span>
+	      				<image mode="scaleToFill" class="time-icon" src="../../images/search-icon/icon2.jpg"></image>
+	      			</span>
+	      			<span bindtap="historyThis" data-id="{{item}}">{{item}}</span>
+	      			
+	      		</view>
+	      	</view>
+	    </view>
+  	</view>
+</view>

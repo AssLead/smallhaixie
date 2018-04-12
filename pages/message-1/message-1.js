@@ -58,9 +58,6 @@ Page({
             wx.hideLoading();
         } else {
           wx.hideLoading();
-          /*that.setData({  
-            activelist: ''
-          })*/
           wx.showToast({
             title: '暂无留言',
             icon: 'none',
@@ -78,5 +75,10 @@ Page({
   
   },
 
-  
+  addmessage: function() {
+    var id = this.data.id;
+    wx.navigateTo({
+      url: '../addmessage/addmessage?id=' + id
+    })
+  }
 })

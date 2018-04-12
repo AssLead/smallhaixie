@@ -7,6 +7,7 @@
     </swiper-item>
   </block>
 </swiper>
+<view class="home-search" bindtap="search"><i class="glyphicon glyphicon-search"></i>搜索你感兴趣的协会</view>
 </view>
 
 <view class="clearfix">

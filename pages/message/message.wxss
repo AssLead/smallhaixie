@@ -46,3 +46,10 @@
 .f10px {
     font-size: 10px !important;
 }
+.admin_message {
+    line-height: 2em;
+    margin-top: 1em;
+}
+strong {
+    font-weight: 700;
+}

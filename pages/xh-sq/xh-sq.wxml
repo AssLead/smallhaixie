@@ -14,15 +14,15 @@
 	        	<small>{{item.createdate}}</small>
 	        </view>
 	        <view class="message-note">{{item.content}}</view>
-	        <view class="xq-img " wx:for="{{item.imgs}}" wx:for-item="imgs" wx:key="id">
+	        <view class="xq-img" wx:for="{{item.imgs}}" wx:for-item="imgs" wx:key="id">
 	            <view class="col-xs-4">
 	            	<image mode="scaleToFill" class="" src="{{imgs}}" ></image>
 	            </view>
 	            
 	        </view>
 
-	        <view class="pull-right plm">
-	            <a href="" data-id="{{item.id}}" bindtap="showsend">
+	        <view class="plm rightview pull-right">
+	            <a href="" class="pull-right mr" data-id="{{item.id}}" bindtap="showsend">
 	            	<span>
 	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/pl.png" ></image>
 	            	</span>
@@ -30,7 +30,7 @@
 	            		评论
 	            	</span>
 	            </a>
-	            <a href="" bindtap="addPraise" data-id='{{item.id}}'>
+	            <a href="" class="pull-right" bindtap="addPraise" data-id='{{item.id}}'>
 	            	<span>
 	            		<image mode="scaleToFill" class="" src="../../images/xh-icon/ok.png" ></image>
 	            	</span>

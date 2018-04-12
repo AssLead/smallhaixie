@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: ['互联网','金融'],
-    index: '',
+    array: ['科技','互联网','金融'],
+    index: 0,
   },
 
   /**
@@ -88,4 +88,9 @@ Page({
     this.findAssDirector(this.data.array[e.detail.value]);
 
   },
+  myqy: function(){
+     wx.navigateTo({
+      url: '../myqy/myqy'
+    })
+  }
 })

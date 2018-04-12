@@ -1,6 +1,17 @@
 .lsqy-title {
+    position: relative;
     margin: 20px 0 30px;
     line-height: 40px;
+}
+.myqy {
+    position: absolute;
+    top:0px;
+    right:0;
+    padding: 2px 10px;
+    bottom:0;
+    line-height: 35px;
+    border:1px solid #484848;
+    border-radius: 5px;
 }
 .f18px {
     font-size: 18px !important;

@@ -140,7 +140,7 @@
 					"id": 17,
 					"name": "note",
 					"pathName": "pages/note/note",
-					"query": "id=2"
+					"query": "id=21"
 				},
 				{
 					"id": -1,
@@ -158,7 +158,7 @@
 					"id": 20,
 					"name": "协会",
 					"pathName": "pages/xh-note/xh-note",
-					"query": "id=1"
+					"query": "id=55"
 				},
 				{
 					"id": -1,
@@ -207,6 +207,42 @@
 					"name": "action",
 					"pathName": "pages/action/action",
 					"query": "id=2"
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": 30,
+					"name": "成员",
+					"pathName": "pages/associationuser/associationuser",
+					"query": "associationId=55"
+				},
+				{
+					"id": 31,
+					"name": "朋友",
+					"pathName": "pages/friend/friend",
+					"query": "id=36"
+				},
+				{
+					"id": -1,
+					"name": "添加留言",
+					"pathName": "pages/addmessage/addmessage",
+					"query": "id=21"
+				},
+				{
+					"id": -1,
+					"name": "我的企业",
+					"pathName": "pages/myqy/myqy",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "协会介绍",
+					"pathName": "pages/xhxq/xhxq",
+					"query": ""
 				}
 			]
 		}

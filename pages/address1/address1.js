@@ -56,7 +56,7 @@ Page({
         } else {
           wx.showToast({
             title: res.msg,
-            icon: 'loading',
+            icon: 'none',
             duration: 2000
           })
         }

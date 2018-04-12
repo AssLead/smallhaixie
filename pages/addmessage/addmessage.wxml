@@ -1,0 +1,6 @@
+<view class="section">
+  	<textarea placeholder="来吧，尽情发挥吧！" auto-focus class="addmessage" bindinput="value"/>
+</view>
+<view class="fb-bg container navbar-fixed-bottom">
+	<view class="footer-btn btn " bindtap="addMessage">发表</view>
+</view>

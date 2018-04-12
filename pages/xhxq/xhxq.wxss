@@ -1,0 +1,142 @@
+.xh-banner {
+    position: relative;
+}
+.home-icon-img {
+	height: 225px;
+}
+.xh-bg {
+    background: rgba(0,0,0,.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.xhb-position {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    bottom: 0;
+}
+.xh-logo {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+.xh-logo image {
+	width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 2px;
+    border: 1px solid #e0e0e0;
+}
+.xh-logo-note {
+    text-align: center;
+    bottom: 7%;
+    left: 0;
+    right: 0;
+}
+.mgt1em {
+    margin-top: 1.2em;
+}
+.f15px {
+    font-size: 15px !important;
+}
+.text-center {
+    text-align: center;
+}
+strong {
+    font-weight: 700;
+}
+.f12px {
+    font-size: 12px !important;
+}
+.xh-logo-note span {
+    margin: 2px 8px;
+    display: inline-block;
+}
+.bcf {
+    color: #00a69a !important;
+}
+.sec10 {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+page {
+
+    color: #484848;
+    padding-bottom: 4.55em;
+    background: #f3f3f3;
+}
+.container {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.xhjx, .xhxq, .xhcy {
+    padding-bottom: 10px;
+}
+.sec10 .f14px {
+    margin-bottom: 8px;
+}
+.f14px {
+    font-size: 14px !important;
+}
+
+.fwb {
+    font-weight: bold;
+}
+.xhxq-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    margin-top: -5px;
+}
+.fgray1 {
+    color: #333;
+}
+.xhcya {
+    display: block;
+    float: left;
+    line-height: 2.5em;
+}
+.xhcya image {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+}
+.xhcyn {
+	line-height: 40px;
+}
+.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.fb-bg {
+    background: #fff;
+    padding: 7px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.footer-btn {
+    display: block;
+    text-align: center;
+    background: #ea5e5d;
+    color: #fff !important;
+    line-height: 26px;
+    font-size: 14px;
+    /*width: 100%;*/
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+        border: 1px solid transparent;
+    border-radius: 4px;
+}

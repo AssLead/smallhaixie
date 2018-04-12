@@ -153,7 +153,7 @@ Page({
           var tempFilePaths = res.tempFilePaths;
           that.setData({
             tempFilePaths:tempFilePaths,
-
+            isClick:true,
           })
         }
       })
@@ -221,20 +221,75 @@ Page({
     hobby.push(hobby1,hobby2) 
     console.log(hobby);
     value.hobby = JSON.stringify(hobby);
+    /*if (that.data.isClick) {
+      console.log(2)
+    } else {
+      console.log(3)
+    }*/
     if (that.data.tempFilePaths.indexOf("type=2") != -1 ) {
-      
-      wx.showToast({
+      var requestUrl = "updataUserinfo";
+      var jsonData = value;
+      console.log(jsonData)
+      request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        if (res.code == 'success') {
+            wx.hideLoading();
+            wx.showToast({
+              title: '保存成功',
+              icon: 'success',
+              duration: 2000
+            })
+        } else {
+            wx.hideLoading();
+            wx.showToast({
+              title: res.msg,
+              icon: 'none',
+              duration: 2000
+            }) 
+          }
+        }
+      )
+      /*wx.showToast({
         title: '请上传图片',
         icon: 'none',
         duration: 2000
       })
-      return;
+      return;*/
+    } else {
+      wx.uploadFile({
+        url: 'http://www.qplant.vip/VisonShop/updataUserinfo', 
+        filePath: that.data.tempFilePaths[0],
+        name: 'portraitImg',
+        formData:value,
+        success: function(res){
+          console.log(res);
+
+          console.log(JSON.parse(res.data).code);
+          
+          if (JSON.parse(res.data).code == 'success') {
+              wx.hideLoading();
+              wx.showToast({
+                title: '保存成功',
+                icon: 'success',
+                duration: 2000
+              })
+          } else {
+            wx.hideLoading();
+            wx.showToast({
+              title: JSON.parse(res.data).msg,
+                icon: 'none',
+                duration: 2000
+            })
+          }
+        }
+      })
     }
     // console.log(that.data.tag);
-    console.log('form发生了submit事件，携带数据为：', value);
+    //console.log('form发生了submit事件，携带数据为：', value);
 
 
-    wx.uploadFile({
+
+    /*wx.uploadFile({
       url: 'http://www.qplant.vip/VisonShop/updataUserinfo', 
       filePath: that.data.tempFilePaths[0],
       name: 'portraitImg',
@@ -260,7 +315,7 @@ Page({
           })
         }
       }
-    })
+    })*/
   },
 
   checkChange: function (e) {

@@ -33,7 +33,7 @@ Page({
     });
     that.findUserActivitiInfo();
     // findActivitiState 
-    var requestUrl = "findActivitiState";
+    /*var requestUrl = "findActivitiState";
     // var userId = wx.getStorageSync('userDetail').id;
     var that = this;
 
@@ -59,10 +59,15 @@ Page({
             })  
             wx.hideLoading();
         } else {
-          wx.hideLoading();
-        }
+            wx.hideLoading();
+            wx.showToast({
+              title: res.msg,
+              icon: 'none',
+              duration: 2000
+            })
+          }
       }
-    )
+    )*/
   },
 
   /**
@@ -71,15 +76,113 @@ Page({
   onReady: function () {
   
   },
+  findUserActivitiInfo:function(){
+    var requestUrl = "findUserActivitiInfo";
+    var userId = wx.getStorageSync('userDetail').id;
+    var that = this;
+
+    var jsonData = {
+        userId:userId,
+    };
+
+    request.httpsPostRequest(requestUrl,jsonData,function(res){
+        console.log(res);
+        wx.showLoading({ title: '加载中...' })
+        if (res.code == 'success') {
+            var activitiInfo = res.list[0];
+            console.log(activitiInfo);
+            /*activitiInfo.clist[0].activitiState = 1;
+            activitiInfo.clist[1].activitiState = 1;
+            activitiInfo.clist[2].activitiState = 1;
+            activitiInfo.clist[3].activitiState = 1;
+            activitiInfo.clist[4].activitiState = 1;
+            activitiInfo.clist[5].activitiState = 1;
+            activitiInfo.clist[6].activitiState = 1;
+            activitiInfo.clist[7].activitiState = 1;
+            activitiInfo.clist[8].activitiState = 1;
+
+            activitiInfo.clist[9].activitiState = 1;
+            activitiInfo.clist[10].activitiState = 2;
+            activitiInfo.clist[11].activitiState = 2;
+            activitiInfo.clist[12].activitiState = 2;*/
+            // for(let i=0; i<activitiInfo.length; i++) {
+            if (activitiInfo.userBean.portrait != undefined) {
+              activitiInfo.userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+activitiInfo.userBean.portrait+'&type=2'
+            }
+            for(let i=0; i<activitiInfo.clist.length; i++) {
+              if (activitiInfo.clist[i].activitiImg != undefined) {
+                activitiInfo.clist[i].activitiImg = 'http://www.qplant.vip/VisonShop/imageaction?name='+activitiInfo.clist[i].activitiImg.split(',')[0]
+              }
+              if (activitiInfo.clist[i].activitiState == 1 || activitiInfo.clist[i].activitiState == 0) {
+                that.setData({  
+                  jinxingzhong: true
+                }) 
+              } else if (activitiInfo.clist[i].activitiState == 2) {
+                that.setData({  
+                  yiwancheng: true
+                })
+              }
+            }
+            if(activitiInfo.clist.length == 0) {
+              wx.showToast({
+                title: '暂无活动',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+            if (that.data.jinxingzhong != true) {
+              wx.showToast({
+                title: '暂无活动',
+                icon: 'none',
+                duration: 2000
+              })
+            }
+            // }
+            that.setData({  
+                activitiInfo: activitiInfo
+            })  
+            wx.hideLoading();
+        } else {
+            wx.hideLoading();
+            wx.showToast({
+              title: res.msg,
+              icon: 'none',
+              duration: 2000
+            })
+          }
+      }
+    )
+  },
   /** 
    * 点击tab切换 
    */  
   swichNav: function( e ) {  
-        wx.showLoading({ title: '加载中...' })
+    // wx.showLoading({ title: '加载中...' })
     
     var that = this;  
-  
-    if( this.data.currentTab === e.target.dataset.current ) {  
+    that.setData( {  
+        currentTab: e.target.dataset.current  
+    })
+    if (e.target.dataset.current == 1) {
+      // console.log(that.data.jinxingzhong)
+      if (that.data.jinxingzhong != true) {
+        wx.showToast({
+          title: '暂无活动',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+    } else if (e.target.dataset.current == 2) {
+      if (that.data.yiwancheng != true) {
+        wx.showToast({
+          title: '暂无活动',
+          icon: 'none',
+          duration: 2000
+        })
+      }
+      // console.log(that.data.yiwancheng)
+    }
+    /*if( this.data.currentTab === e.target.dataset.current ) {  
       return false;  
     } else {  
       that.setData( {  
@@ -123,48 +226,30 @@ Page({
             }) 
         }
       }
-    )
+    )*/
 
   },
   actdetail: function(e) {
     var id = e.currentTarget.dataset.id;
-    console.log(e)
+    var state = e.currentTarget.dataset.state
+    console.log(state);
+    /*if (state == 2) {
+      wx.showToast({
+        title: '活动已结束',
+        icon: 'none',
+        duration: 2000
+      })
+
+    } else {
+      wx.navigateTo({
+        url: '../note/note?id=' + id + '&' + 'activitiState=' + "false"
+      })
+    }*/
     wx.navigateTo({
-      url: '../note/note?id=' + id
+      url: '../note/note?id=' + id + '&' + 'activitiState=' + "false"
     })
   },
-  findUserActivitiInfo: function() {
-    // findUserActivitiInfo 
-    var requestUrl = "findUserActivitiInfo";
-    var userId = wx.getStorageSync('userDetail').id;
-    var that = this;
-
-    var jsonData = {
-        userId:userId,
-    };
-
-    request.httpsPostRequest(requestUrl,jsonData,function(res){
-        console.log(res);
-        wx.showLoading({ title: '加载中...' })
-        if (res.code == 'success') {
-            var activitiInfo = res.list[0];
-            console.log(activitiInfo);
-            // for(let i=0; i<activitiInfo.length; i++) {
-              if (activitiInfo.userBean.portrait != undefined) {
-                activitiInfo.userBean.portrait = 'http://www.qplant.vip/VisonShop/imageaction?name='+activitiInfo.userBean.portrait+'&type=2'
-              }
-
-            // }
-            that.setData({  
-                activitiInfo: activitiInfo
-            })  
-            wx.hideLoading();
-        } else {
-          wx.hideLoading();
-        }
-      }
-    )
-  },
+  
   joinActiviti: function(e) {
     wx.showLoading({ title: '加载中...' })
     // joinActiviti 

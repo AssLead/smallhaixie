@@ -59,8 +59,13 @@ Page({
 
             
         } else {
-          wx.hideLoading();
-        }
+            wx.hideLoading();
+            wx.showToast({
+              title: res.msg,
+              icon: 'none',
+              duration: 2000
+            })
+          }
       }
     )
   }

@@ -135,5 +135,10 @@ Page({
     setTimeout(function () {  
       wx.stopPullDownRefresh();
     }, 100)
+  },
+  search:function() {
+    wx.navigateTo({
+      url: '../search/search'
+    })
   }
 })

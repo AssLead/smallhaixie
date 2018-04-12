@@ -1,0 +1,68 @@
+<view>
+    <view class="xh-banner">
+    	<image mode="scaleToFill" class="home-icon-img" src="{{associationList.banners[0]}}"></image>
+      	<view class="xh-bg">
+      		<image mode="scaleToFill" class="home-icon-img" src="../../images/xhtopbg.png"></image>
+      	</view>
+      	<view class="xhb-position">
+	        <view class="xh-logo">
+	        	<image mode="scaleToFill" class="" src="{{associationList.associationImg}}"></image>
+	        </view>
+	        <view class="xh-logo-note">
+	            <view class="f15px mgt1em text-center"><strong>{{associationList.associationName}}</strong></view>
+	            <view class="f12px"><span>地址：<a href="javascript:;" class="bcf">{{associationList.address}}</a></span> <span>成员：<a href="javascript:;" class="bcf">{{associationList.memberNum}}人</a></span>    </view>
+	        </view>
+
+	    </view>
+    </view>
+</view>
+<view class="sec10">
+    <view class="container">
+          <view class="xhjx">
+            <view class="f14px fwb">
+            	<span>
+            		<image mode="scaleToFill" class="xhxq-icon" src="../../images/xhxqicon1.png"></image>
+            	</span>
+	            协会介绍
+	        </view>
+            <view class="f12px fgray1">{{associationList.associationBrief}}</view>
+         </view>
+    </view>
+</view>
+
+<view class="sec10">
+        <view class="container">
+	        <view class="xhcy clearfix">
+	           <view class="f14px fwb">
+	           		<span><image mode="scaleToFill" class="xhxq-icon" src="../../images/xhxqicon2.png"></image></span>
+	           		协会成员
+	           	</view>
+	           	<view class="xhcya" wx:for="{{associationList.ulist}}" wx:if="{{index < 5}}">
+	           		<image mode="scaleToFill" class="" src="{{item.portrait}}"></image>
+	           	</view>
+
+	            <view class="bcf xhcyn pull-right" bindtap="more">{{associationList.memberNum}}名成员> </view>
+	         
+	         </view>
+
+        </view>
+</view>
+<!-- 
+<view class="sec10">
+    <view class="container">
+        <view class="xh-map">
+          	<view class="x-map">
+              	<img src="img/map_03.jpg">
+              	<view class="x-address">
+                    <p>深圳市福田区益田路3008号皇都广场A座807</p>
+                    <p class="bcf">400-006 8738</p>
+                    <p class="bcf">http//:www.cuiyuantech.org</p>
+                </view>
+            </view>
+        </view>
+    </view>
+</view> -->
+
+<view class="fb-bg container navbar-fixed-bottom">
+    <view class="footer-btn btn " bindtap="addAssociationUser">{{isjoin}}</view>
+ </view>

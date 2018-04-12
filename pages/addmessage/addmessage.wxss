@@ -1,0 +1,37 @@
+.addmessage {
+	width: 100%;
+	height: 300px;
+	padding: 15px
+}
+.navbar-fixed-bottom {
+    bottom: 0;
+    margin-bottom: 0;
+    border-width: 1px 0 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.fb-bg {
+    background: #fff;
+    padding: 7px 15px;
+    border-top: 1px solid #e0e0e0;
+}
+.footer-btn {
+    display: block;
+    text-align: center;
+    background: #ea5e5d;
+    color: #fff !important;
+    line-height: 26px;
+    font-size: 14px;
+    /*width: 100%;*/
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+        border: 1px solid transparent;
+    border-radius: 4px;
+}
+page {
+    color: #484848;
+    background: #f3f3f3;
+}

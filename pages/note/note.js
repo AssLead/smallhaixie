@@ -24,6 +24,7 @@ Page({
       },
       clickable: true
     }],
+    activitiState:true
   },
   regionchange(e) {
     console.log(e.type)
@@ -41,7 +42,6 @@ Page({
   onLoad: function (options) {
     wx.showLoading({ title: '加载中...' })
 
-    wx.showLoading({ title: '加载中...' })
     var that = this;
     // 页面初始化 options为页面跳转所带来的参数
     app.isLogin(function (userDetail) {
@@ -53,6 +53,7 @@ Page({
     console.log(options)
     that.setData({
         id:options.id,
+        activitiState:options.activitiState
     })
 
     // findActiviti
@@ -121,6 +122,9 @@ Page({
               }) 
             }
             var mlist = activelist[0].mlist;
+            that.setData({  
+              mlist: mlist
+            }) 
             if (mlist == "") {
               that.setData({  
                 mhide:'hide'
@@ -143,9 +147,10 @@ Page({
             }
             that.setData({  
               activelist: activelist[0],
-              // latitude: activelist[0].longitude.split(",")[0],
-              // longitude: activelist[0].longitude.split(",")[1],
-              markers:markers
+              markers:markers,
+              joinlist:activelist[0].joinlist,
+              
+
             }) 
             console.log(activelist);
             var imgUrls=activelist[0].activitiImg;
@@ -167,7 +172,8 @@ Page({
 
             that.setData({  
               imgUrls:imgUrls,
-              joinimgUrls:joinimgUrls
+              joinimgUrls:joinimgUrls,
+              
             }) 
             
             
@@ -194,8 +200,17 @@ Page({
   
   },
   moreMessage: function() {
+    var list = JSON.stringify(this.data.mlist);
     wx.navigateTo({
-      url: '../message/message'
+      url: '../message/message?list=' + list 
+    })
+  },
+  morejoin: function() {
+    //console.log(this.data.joinlist)
+    var list = JSON.stringify(this.data.joinlist);
+    console.log(list)
+    wx.navigateTo({
+      url: '../joinuser/joinuser?list=' + list 
     })
   },
   actdetail: function(e) {
