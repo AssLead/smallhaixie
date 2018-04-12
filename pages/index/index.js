@@ -80,6 +80,9 @@ Page({
   onReady: function () {
 
   },
+  onShow: function(options) {
+    this.getAssociationList();
+  },
   associationdetail: function(e) {
     var id = e.currentTarget.dataset.id;
     console.log(id)

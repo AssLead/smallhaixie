@@ -84,6 +84,7 @@ Page({
               icon: 'success',
               duration: 2000
             })
+            wx.navigateBack()
         } else {
           wx.hideLoading();
           wx.showToast({
@@ -91,6 +92,7 @@ Page({
               icon: 'none',
               duration: 2000
           })
+          wx.navigateBack()
         }
       }
     })
