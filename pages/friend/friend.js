@@ -33,7 +33,7 @@ Page({
           console.log(res);
           var userDetail = res.data.list[0];
           console.log(userDetail.hobby)
-          if (userDetail.hobby != "") {
+          if (userDetail.hobby != "" && userDetail.hobby != undefined) {
             userDetail.hobby = JSON.parse(userDetail.hobby)
           }
           if (userDetail.portrait != undefined) {
